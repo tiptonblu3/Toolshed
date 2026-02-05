@@ -104,9 +104,10 @@ GameObject:
   - component: {fileID: 6028324814652520536}
   - component: {fileID: 2143122175869967380}
   - component: {fileID: 3893944654445950825}
+  - component: {fileID: 9213903385190678390}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -261,7 +262,19 @@ MonoBehaviour:
     m_ActionId: 2c8fd16e-e978-47ea-8586-2a3350280e5e
     m_ActionName: 'Player/Look[/Mouse/delta]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11500000, guid: e1a21a498e9120e4881fc5aecdee48cb, type: 3}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 73e2b562-13bc-43ca-b432-0c4baf121df2
     m_ActionName: 'Player/Fire[/Mouse/leftButton]'
   - m_PersistentCalls:
@@ -309,3 +322,17 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &9213903385190678390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5569684841443889512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1a21a498e9120e4881fc5aecdee48cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerAttack
+  FootballPrefab: {fileID: 4982224238187528047, guid: 1e4cdafb3516cd140a411407721428ba, type: 3}
+  FireInput: {fileID: 4982224238187528047, guid: 1e4cdafb3516cd140a411407721428ba, type: 3}
