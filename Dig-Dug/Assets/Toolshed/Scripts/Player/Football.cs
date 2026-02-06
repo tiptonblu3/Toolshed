@@ -7,20 +7,57 @@ public class Football : MonoBehaviour
     public float MaxDistance = 3f;
     public int Damage = 1;
     private Vector2 StartPosition;
+    public Transform Player;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         // Record the starting position
         StartPosition = transform.position;
+
+        // Automatically find the player by tag
+        GameObject PlayerObj = GameObject.FindWithTag("Player");
+
+       
+        if (PlayerObj != null)
+        {
+            Player = PlayerObj.transform;
+        }
+        else
+        {
+            Debug.LogWarning("Football could not find a Player object!");
+        }
+
+        // Set the football's initial velocity to move in the direction the player is facing
+        if (Player != null)
+        {
+            /*if (Player.localScale.x > 0 && Player.localScale.x < 0)
+            {
+                // Facing right
+                GetComponent<Rigidbody2D>().linearVelocity = Vector2.right * Speed;
+            }
+            else if (Player.localScale.x < 0)
+            {
+                // Facing left
+                GetComponent<Rigidbody2D>().linearVelocity = Vector2.left * Speed;
+            }*/
+            if (Player.localScale.x > 0)
+            {
+                // Facing right
+                GetComponent<Rigidbody2D>().linearVelocity = Vector2.right * Speed;
+            }
+            else if (Player.localScale.x < 0)
+            {
+                // Facing left
+                GetComponent<Rigidbody2D>().linearVelocity = Vector2.left * Speed;
+            }
+            
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        // Move the football forward
-        transform.Translate(Vector2.right * Speed * Time.deltaTime);
-
         // Check if the football has traveled beyond its maximum distance
         if (Vector2.Distance(StartPosition, transform.position) >= MaxDistance)
         {
@@ -38,13 +75,8 @@ public class Football : MonoBehaviour
             // Check if the football collides with an enemy
             if (collision.CompareTag("Enemy"))
             {
-                // Here you would typically access the enemy's health component and apply damage
-                // For example:
-                // EnemyHealth enemyHealth = collision.GetComponent<EnemyHealth>();
-                // if (enemyHealth != null)
-                // {
-                //     enemyHealth.TakeDamage(Damage);
-                // }
+                // Apply damage to the enemy (you can implement this in your enemy script)
+                // For example, if your enemy has a method called TakeDamage(int damage):
     
                 Destroy(gameObject); // Destroy the football after hitting an enemy
             }
