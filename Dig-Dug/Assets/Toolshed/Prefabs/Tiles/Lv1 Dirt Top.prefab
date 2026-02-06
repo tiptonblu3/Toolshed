@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5042014297676125952}
   m_Layer: 0
   m_Name: Lv1 Dirt Top
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -80,7 +80,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 24fa80685cf6f3947bc16d0e25cc59f9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

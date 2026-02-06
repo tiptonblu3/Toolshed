@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5234280624504547392
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5714318642526604923}
+  m_Layer: 0
+  m_Name: FirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5714318642526604923
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5234280624504547392}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.375, y: 0.1875, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4261543441407613374}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5563424647105755635
 GameObject:
   m_ObjectHideFlags: 0
@@ -103,8 +134,8 @@ GameObject:
   - component: {fileID: 9030851630115780134}
   - component: {fileID: 6028324814652520536}
   - component: {fileID: 2143122175869967380}
-  - component: {fileID: 3893944654445950825}
   - component: {fileID: 9213903385190678390}
+  - component: {fileID: 3893944654445950825}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -126,6 +157,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7428935547123753328}
+  - {fileID: 5714318642526604923}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &9030851630115780134
@@ -216,6 +248,21 @@ MonoBehaviour:
   MoveSpeed: 5
   rb: {fileID: 0}
   MoveInput: {x: 0, y: 0}
+--- !u!114 &9213903385190678390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5569684841443889512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1a21a498e9120e4881fc5aecdee48cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerAttack
+  FootballPrefab: {fileID: 4982224238187528047, guid: 1e4cdafb3516cd140a411407721428ba, type: 3}
+  FirePoint: {fileID: 5714318642526604923}
+  FireAction: {fileID: -1383790030839574557, guid: 44c0669e9cb542b46b9830a71d8f0750, type: 3}
 --- !u!114 &3893944654445950825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -322,17 +369,3 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &9213903385190678390
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5569684841443889512}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1a21a498e9120e4881fc5aecdee48cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerAttack
-  FootballPrefab: {fileID: 4982224238187528047, guid: 1e4cdafb3516cd140a411407721428ba, type: 3}
-  FireInput: {fileID: 4982224238187528047, guid: 1e4cdafb3516cd140a411407721428ba, type: 3}
