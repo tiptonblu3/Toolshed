@@ -9,10 +9,14 @@ public class PlayerMovement : MonoBehaviour
     public Vector2 MoveInput;
     public bool IsMoving;
     public bool IsFacingLeft = false;
+    [SerializeField] private Animator animator;
+
 
     void Start()
     {
        rb =  GetComponent<Rigidbody2D>();
+       animator = GetComponent<Animator>();
+
     }
 
     void Update()
@@ -21,6 +25,18 @@ public class PlayerMovement : MonoBehaviour
         // Call the flip logic
         LeftCheck();
         FlipSprite();
+        #region Animation
+        if (MoveInput != Vector2.zero)
+        {
+            IsMoving = true;
+            animator.SetBool("IsMoving", true);
+        }
+        else
+        {
+            IsMoving = false;
+            animator.SetBool("IsMoving", false);
+        }
+        #endregion
     }
 
     public void Move(InputAction.CallbackContext context)
