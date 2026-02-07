@@ -188,11 +188,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63cb4994cc6fcea4490b3574f1a954dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerDig
+  MoveSpeedScript: {fileID: 0}
   CurrentTile: {fileID: 0}
-  DigTime: 1
+  DigTime: 0.75
   DigTimer: 0
   IsDigging: 0
-  MoveSpeedScript: {fileID: 0}
 --- !u!114 &2143122175869967380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -205,19 +205,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e391fe248bb5224094cbdb9fbd81d52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  MoveSpeed: 5
+  PlayerAnimator: {fileID: 0}
+  ObstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  MoveSpeed: 3
+  TileSize: 1
   Rb: {fileID: 0}
   MoveInput: {x: 0, y: 0}
+  TargetPosition: {x: 0, y: 0}
   IsMoving: 0
   IsFacingLeft: 0
   IsFacingUp: 0
   IsFacingDown: 0
-  PlayerAnimator: {fileID: 0}
-  TargetPosition: {x: 0, y: 0}
-  TileSize: 1
-  ObstacleLayer:
-    serializedVersion: 2
-    m_Bits: 0
 --- !u!114 &9213903385190678390
 MonoBehaviour:
   m_ObjectHideFlags: 0
