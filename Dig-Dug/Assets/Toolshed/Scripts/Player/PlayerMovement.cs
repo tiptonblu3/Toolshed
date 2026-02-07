@@ -24,8 +24,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         rb.linearVelocity = MoveInput * MoveSpeed;
-        // Call the flip logic
-        LeftCheck();
+        // Call the flip logic to ensure the sprite faces the correct direction
         FlipSprite();
         #region Animation
         if (MoveInput != Vector2.zero)
@@ -58,7 +57,8 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    public void LeftCheck()
+
+    private void FlipSprite()
     {
         if (MoveInput.x < 0)
         {
@@ -68,10 +68,6 @@ public class PlayerMovement : MonoBehaviour
         {
             IsFacingLeft = false;
         }
-    }
-
-    private void FlipSprite()
-    {
         // Check if there is horizontal movement
         if (MoveInput.x > 0)
         {
