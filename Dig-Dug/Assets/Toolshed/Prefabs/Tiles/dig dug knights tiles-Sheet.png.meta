@@ -1,0 +1,782 @@
+fileFormatVersion: 2
+guid: 04129d5f66005f848aad84bb4e38b4a6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6020985958310062455
+    second: dig dug knights tiles-Sheet_0
+  - first:
+      213: 2766321561644373342
+    second: dig dug knights tiles-Sheet_1
+  - first:
+      213: 1464149525337796066
+    second: dig dug knights tiles-Sheet_2
+  - first:
+      213: -8277140807044741718
+    second: dig dug knights tiles-Sheet_3
+  - first:
+      213: -2326498066825156486
+    second: dig dug knights tiles-Sheet_4
+  - first:
+      213: -1239805472328996710
+    second: dig dug knights tiles-Sheet_5
+  - first:
+      213: 1494254111732066305
+    second: dig dug knights tiles-Sheet_6
+  - first:
+      213: -886414826696020899
+    second: dig dug knights tiles-Sheet_7
+  - first:
+      213: -4019073342349918895
+    second: dig dug knights tiles-Sheet_8
+  - first:
+      213: -7478383565227893373
+    second: dig dug knights tiles-Sheet_9
+  - first:
+      213: -3029161698933611928
+    second: dig dug knights tiles-Sheet_10
+  - first:
+      213: 1460184172238716477
+    second: dig dug knights tiles-Sheet_11
+  - first:
+      213: -2090787983403824741
+    second: dig dug knights tiles-Sheet_12
+  - first:
+      213: 3638747368089477039
+    second: dig dug knights tiles-Sheet_13
+  - first:
+      213: 4781730337184972411
+    second: dig dug knights tiles-Sheet_14
+  - first:
+      213: -7502152415460666136
+    second: dig dug knights tiles-Sheet_15
+  - first:
+      213: -7457143858316187323
+    second: dig dug knights tiles-Sheet_16
+  - first:
+      213: 8374786317513197392
+    second: dig dug knights tiles-Sheet_17
+  - first:
+      213: -7261038196951703378
+    second: dig dug knights tiles-Sheet_18
+  - first:
+      213: 7092258379039993513
+    second: dig dug knights tiles-Sheet_19
+  - first:
+      213: -2261745843738406483
+    second: dig dug knights tiles-Sheet_20
+  - first:
+      213: -7188890891517731875
+    second: dig dug knights tiles-Sheet_21
+  - first:
+      213: 1475626069886398470
+    second: dig dug knights tiles-Sheet_22
+  - first:
+      213: -2029142565099727718
+    second: dig dug knights tiles-Sheet_23
+  - first:
+      213: 8815027139101186664
+    second: dig dug knights tiles-Sheet_24
+  - first:
+      213: -450816717218596187
+    second: dig dug knights tiles-Sheet_25
+  - first:
+      213: -3883039805388808879
+    second: dig dug knights tiles-Sheet_26
+  - first:
+      213: -4512473258509087575
+    second: dig dug knights tiles-Sheet_27
+  - first:
+      213: -6814577360126281031
+    second: dig dug knights tiles-Sheet_28
+  - first:
+      213: -3449834662073396239
+    second: dig dug knights tiles-Sheet_29
+  - first:
+      213: -5833663625370453604
+    second: dig dug knights tiles-Sheet_30
+  - first:
+      213: 6623515506754904292
+    second: dig dug knights tiles-Sheet_31
+  - first:
+      213: 4198600699651328582
+    second: dig dug knights tiles-Sheet_32
+  - first:
+      213: 2578918980386531879
+    second: dig dug knights tiles-Sheet_33
+  - first:
+      213: 1821354065867984656
+    second: dig dug knights tiles-Sheet_34
+  - first:
+      213: 5096750279276813747
+    second: dig dug knights tiles-Sheet_35
+  - first:
+      213: 8747973320189685457
+    second: dig dug knights tiles-Sheet_36
+  - first:
+      213: -5036972704600353037
+    second: dig dug knights tiles-Sheet_37
+  - first:
+      213: 4808982496094275189
+    second: dig dug knights tiles-Sheet_38
+  - first:
+      213: 3437484795090693246
+    second: dig dug knights tiles-Sheet_39
+  - first:
+      213: -1949021921619483005
+    second: dig dug knights tiles-Sheet_40
+  - first:
+      213: 8380739921959879847
+    second: dig dug knights tiles-Sheet_41
+  - first:
+      213: -8652401636866096639
+    second: dig dug knights tiles-Sheet_42
+  - first:
+      213: 1496917646904901877
+    second: dig dug knights tiles-Sheet_43
+  - first:
+      213: -4881613142954350463
+    second: dig dug knights tiles-Sheet_44
+  - first:
+      213: -7832806936542470251
+    second: dig dug knights tiles-Sheet_45
+  - first:
+      213: 7872221596268531224
+    second: dig dug knights tiles-Sheet_46
+  - first:
+      213: -5223910902123672598
+    second: dig dug knights tiles-Sheet_47
+  - first:
+      213: 5576967595724540628
+    second: dig dug knights tiles-Sheet_48
+  - first:
+      213: -7893881095711038666
+    second: dig dug knights tiles-Sheet_49
+  - first:
+      213: -3525653169031145521
+    second: dig dug knights tiles-Sheet_50
+  - first:
+      213: -7944397304028861501
+    second: dig dug knights tiles-Sheet_51
+  - first:
+      213: -5894788464989251210
+    second: dig dug knights tiles-Sheet_52
+  - first:
+      213: -7217349923120231077
+    second: dig dug knights tiles-Sheet_53
+  - first:
+      213: -125326449689033214
+    second: dig dug knights tiles-Sheet_54
+  - first:
+      213: -3787035029500765672
+    second: dig dug knights tiles-Sheet_55
+  - first:
+      213: -8003530003355891198
+    second: dig dug knights tiles-Sheet_56
+  - first:
+      213: 4051942703418142121
+    second: dig dug knights tiles-Sheet_57
+  - first:
+      213: 6939562713195277914
+    second: dig dug knights tiles-Sheet_58
+  - first:
+      213: 1062709355696731743
+    second: dig dug knights tiles-Sheet_59
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: dig dug knights tiles-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9865055eb29217ca0800000000000000
+      internalID: -6020985958310062455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dig dug knights tiles-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e551150cdc2f36620800000000000000
+      internalID: 2766321561644373342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dig dug knights tiles-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ede0d36c34b15410800000000000000
+      internalID: 1464149525337796066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dig dug knights tiles-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa545384a40b12d80800000000000000
+      internalID: -8277140807044741718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dig dug knights tiles-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a78e044a55e96bfd0800000000000000
+      internalID: -2326498066825156486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dig dug knights tiles-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a98ae3fdd735bcee0800000000000000
+      internalID: -1239805472328996710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dig dug knights tiles-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 108e4fd9238acb410800000000000000
+      internalID: 1494254111732066305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dig dug knights tiles-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5ce42b5962d2b3f0800000000000000
+      internalID: -886414826696020899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dig dug knights tiles-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15dbdfec6126938c0800000000000000
+      internalID: -4019073342349918895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dig dug knights tiles-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38dd87405c1773890800000000000000
+      internalID: -7478383565227893373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dig dug knights tiles-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 862e7d7eb7146f5d0800000000000000
+      internalID: -3029161698933611928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dig dug knights tiles-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3ebfeca4cd934410800000000000000
+      internalID: 1460184172238716477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dig dug knights tiles-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b994f8418670cf2e0800000000000000
+      internalID: -2090787983403824741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dig dug knights tiles-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: faf5c5ec37d6f7230800000000000000
+      internalID: 3638747368089477039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dig dug knights tiles-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7e7e9f286e1c5240800000000000000
+      internalID: 4781730337184972411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dig dug knights tiles-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e4d0a1502003e790800000000000000
+      internalID: -7502152415460666136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dig dug knights tiles-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 549e316ab27e28890800000000000000
+      internalID: -7457143858316187323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dig dug knights tiles-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0570d25c8c7393470800000000000000
+      internalID: 8374786317513197392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dig dug knights tiles-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea0a6220b3c9b3b90800000000000000
+      internalID: -7261038196951703378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dig dug knights tiles-Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ae67f95b63cc6260800000000000000
+      internalID: 7092258379039993513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dig dug knights tiles-Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da191cb632aac90e0800000000000000
+      internalID: -2261745843738406483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: ec80f1fff285d3445aaaace5f6d18d88
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      dig dug knights tiles-Sheet_0: -6020985958310062455
+      dig dug knights tiles-Sheet_1: 2766321561644373342
+      dig dug knights tiles-Sheet_10: -3029161698933611928
+      dig dug knights tiles-Sheet_11: 1460184172238716477
+      dig dug knights tiles-Sheet_12: -2090787983403824741
+      dig dug knights tiles-Sheet_13: 3638747368089477039
+      dig dug knights tiles-Sheet_14: 4781730337184972411
+      dig dug knights tiles-Sheet_15: -7502152415460666136
+      dig dug knights tiles-Sheet_16: -7457143858316187323
+      dig dug knights tiles-Sheet_17: 8374786317513197392
+      dig dug knights tiles-Sheet_18: -7261038196951703378
+      dig dug knights tiles-Sheet_19: 7092258379039993513
+      dig dug knights tiles-Sheet_2: 1464149525337796066
+      dig dug knights tiles-Sheet_20: -2261745843738406483
+      dig dug knights tiles-Sheet_3: -8277140807044741718
+      dig dug knights tiles-Sheet_4: -2326498066825156486
+      dig dug knights tiles-Sheet_5: -1239805472328996710
+      dig dug knights tiles-Sheet_6: 1494254111732066305
+      dig dug knights tiles-Sheet_7: -886414826696020899
+      dig dug knights tiles-Sheet_8: -4019073342349918895
+      dig dug knights tiles-Sheet_9: -7478383565227893373
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
