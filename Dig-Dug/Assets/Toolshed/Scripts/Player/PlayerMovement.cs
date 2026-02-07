@@ -9,6 +9,8 @@ public class PlayerMovement : MonoBehaviour
     public Vector2 MoveInput;
     public bool IsMoving;
     public bool IsFacingLeft = false;
+    public bool IsFacingUp = false;
+    public bool IsFacingDown = false;
     [SerializeField] private Animator animator;
 
 
@@ -87,28 +89,38 @@ public class PlayerMovement : MonoBehaviour
         {
             // Ensure the sprite is flipped correctly when moving horizontally
             transform.localRotation = Quaternion.Euler(0, 0, -90);
+            IsFacingDown = false;
+            IsFacingUp = true;
         }
         else if (MoveInput.y > 0)
         {
             // Face up
             transform.localRotation = Quaternion.Euler(0, 0, 90);
+            IsFacingDown = false;
+            IsFacingUp = true;
         }
 
         if (IsFacingLeft == true && MoveInput.y < 0)
         {
             // Ensure the sprite is flipped correctly when moving horizontally
             transform.localRotation = Quaternion.Euler(0, 0, 90);
+            IsFacingDown = true;
+            IsFacingUp = false;
         }
         else if (MoveInput.y < 0)
         {
             // Face down
             transform.localRotation = Quaternion.Euler(0, 0, -90);
+            IsFacingDown = true;
+            IsFacingUp = false;
         }
 
         if (MoveInput.x != 0)
         {
             // Reset rotation when moving horizontally
             transform.localRotation = Quaternion.Euler(0, 0, 0);
+            IsFacingDown = false;
+            IsFacingUp = false;
         }
 
         /**/
