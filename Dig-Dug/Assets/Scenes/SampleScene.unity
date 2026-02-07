@@ -2282,6 +2282,10 @@ PrefabInstance:
       propertyPath: MoveSpeed
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 2143122175869967380, guid: 04d5678360d1bac4885dc83125a62608, type: 3}
+      propertyPath: ObstacleLayer.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 4261543441407613374, guid: 04d5678360d1bac4885dc83125a62608, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.5

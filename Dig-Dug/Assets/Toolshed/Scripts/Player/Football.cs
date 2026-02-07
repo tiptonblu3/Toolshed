@@ -2,29 +2,58 @@ using UnityEngine;
 
 public class Football : MonoBehaviour
 {
+    #region === Inspector Settings ===
+
     [Header("Settings")]
-    public float Speed = 10f;
-    public float MaxDistance = 3f;
-    public int Damage = 1;
-    private Vector2 StartPosition;
-    public Transform Player;
-    
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public float Speed = 10f;          // How fast the football travels
+    public float MaxDistance = 3f;     // How far it can travel before despawning
+    public int Damage = 1;             // Damage to apply on hit (handled elsewhere)
+
+    #endregion
+
+
+    #region === Runtime State ===
+
+    private Vector2 StartPosition;     // Where the football was spawned
+    public Transform Player;           // Reference to the player transform
+
+    #endregion
+
+
+    #region === Unity Lifecycle ===
+
     void Start()
     {
-        // Record the starting position
+        InitializeStartPosition();
+        FindPlayer();
+        LaunchInPlayerFacingDirection();
+    }
+
+    void Update()
+    {
+        CheckMaxTravelDistance();
+    }
+
+    #endregion
+
+
+    #region === Initialization ===
+
+    /// <summary>
+    /// Records the spawn position so we know how far the football has traveled.
+    /// </summary>
+    private void InitializeStartPosition()
+    {
         StartPosition = transform.position;
+    }
 
-        // Automatically find the player by tag
+    /// <summary>
+    /// Attempts to locate the player in the scene using the "Player" tag.
+    /// </summary>
+    private void FindPlayer()
+    {
         GameObject PlayerObj = GameObject.FindWithTag("Player");
-        PlayerMovement playerMovement = PlayerObj.GetComponent<PlayerMovement>();
-        bool IsFacingDown = playerMovement.IsFacingDown;
-        bool IsFacingUp = playerMovement.IsFacingUp;
-        bool IsFacingLeft = playerMovement.IsFacingLeft;
-        bool IsFacingRight = !IsFacingLeft;
 
-
-       
         if (PlayerObj != null)
         {
             Player = PlayerObj.transform;
@@ -33,63 +62,89 @@ public class Football : MonoBehaviour
         {
             Debug.LogWarning("Football could not find a Player object!");
         }
+    }
 
-        // Set the football's initial velocity to move in the direction the player is facing
+    /// <summary>
+    /// Sets the football's velocity based on the direction the player is facing.
+    /// </summary>
+    private void LaunchInPlayerFacingDirection()
+    {
+        GameObject PlayerObj = GameObject.FindWithTag("Player");
+        PlayerMovement playerMovement = PlayerObj.GetComponent<PlayerMovement>();
+
+        bool IsFacingDown = playerMovement.IsFacingDown;
+        bool IsFacingUp = playerMovement.IsFacingUp;
+        bool IsFacingLeft = playerMovement.IsFacingLeft;
+        bool IsFacingRight = !IsFacingLeft;
+
         if (Player != null)
         {
+            // Facing Down
             if (IsFacingDown == true)
             {
-                // Facing down
                 GetComponent<Rigidbody2D>().linearVelocity = Vector2.down * Speed;
                 Debug.Log("Football is moving down");
             }
+
+            // Facing Up
             if (IsFacingUp == true)
             {
-                // Facing up
                 GetComponent<Rigidbody2D>().linearVelocity = Vector2.up * Speed;
                 Debug.Log("Football is moving up");
             }
 
+            // Facing Right
             if (IsFacingRight == true && IsFacingLeft == false && IsFacingUp == false && IsFacingDown == false)
             {
-                // Facing right
                 GetComponent<Rigidbody2D>().linearVelocity = Vector2.right * Speed;
                 Debug.Log("Football is moving right");
             }
+
+            // Facing Left
             if (IsFacingLeft == true && IsFacingRight == false && IsFacingUp == false && IsFacingDown == false)
             {
-                // Facing left
                 GetComponent<Rigidbody2D>().linearVelocity = Vector2.left * Speed;
                 Debug.Log("Football is moving left");
             }
-            
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    #endregion
+
+
+    #region === Lifetime Control ===
+
+    /// <summary>
+    /// Destroys the football if it has exceeded its maximum allowed travel distance.
+    /// </summary>
+    private void CheckMaxTravelDistance()
     {
-        // Check if the football has traveled beyond its maximum distance
         if (Vector2.Distance(StartPosition, transform.position) >= MaxDistance)
         {
-            Destroy(gameObject); // Destroy the football
+            Destroy(gameObject);
         }
     }
-        private void OnTriggerEnter2D(Collider2D collision)
-        {
-            if (collision.CompareTag("Ground"))
-            {
-                Debug.Log("Football hit the ground");
-                Destroy(gameObject);
-            }
 
-            // Check if the football collides with an enemy
-            if (collision.CompareTag("Enemy"))
-            {
-                // Apply damage to the enemy (you can implement this in your enemy script)
-                // For example, if your enemy has a method called TakeDamage(int damage):
-    
-                Destroy(gameObject); // Destroy the football after hitting an enemy
-            }
+    #endregion
+
+
+    #region === Collision Handling ===
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        // Hit the ground — just despawn
+        if (collision.CompareTag("Ground"))
+        {
+            Debug.Log("Football hit the ground");
+            Destroy(gameObject);
         }
+
+        // Hit an enemy — damage would be applied in the enemy script
+        if (collision.CompareTag("Enemy"))
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    #endregion
 }

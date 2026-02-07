@@ -3,77 +3,119 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float MoveSpeed = 5f;
+    #region === Inspector References ===
+
+    [SerializeField] private Animator PlayerAnimator;
+    [SerializeField] private LayerMask ObstacleLayer; // What tiles count as walls/blocked
+
+    #endregion
+
+
+    #region === Movement Settings ===
+
+    public float MoveSpeed = 3f;
+    public float TileSize = 1f; // Size of one grid step
+
+    #endregion
+
+
+    #region === Runtime State ===
+
     public Rigidbody2D Rb;
-    public Vector2 MoveInput;
+
+    public Vector2 MoveInput;        // Current snapped directional input
+    public Vector2 TargetPosition;   // The grid position we are moving toward
+
     public bool IsMoving;
     public bool IsFacingLeft = false;
     public bool IsFacingUp = false;
     public bool IsFacingDown = false;
-    
-    [SerializeField] private Animator PlayerAnimator;
-    public Vector2 TargetPosition;
-    public float TileSize = 1f;
-    
-    // Add a LayerMask for things you cannot walk through (like walls)
-    [SerializeField] private LayerMask ObstacleLayer;
+
+    #endregion
+
+
+    #region === Unity Lifecycle ===
 
     void Start()
     {
+        // Cache required components
         Rb = GetComponent<Rigidbody2D>();
         PlayerAnimator = GetComponent<Animator>();
-        
-        // Ensure we start aligned to the grid
+
+        // Ensure we start aligned perfectly to the grid
         TargetPosition = transform.position;
     }
 
     void Update()
     {
-        // 1. Smoothly move toward the target
-        transform.position = Vector2.MoveTowards(transform.position, TargetPosition, MoveSpeed * Time.deltaTime);
+        HandleMovement();
+        HandleAnimation();
+        FlipSprite();
+    }
 
-        // 2. Logic gate: only check for new moves when at the destination
+    #endregion
+
+
+    #region === Core Movement Logic ===
+
+    private void HandleMovement()
+    {
+        // Smoothly move toward the current target tile
+        transform.position = Vector2.MoveTowards(
+            transform.position,
+            TargetPosition,
+            MoveSpeed * Time.deltaTime
+        );
+
+        // Only allow choosing a new tile once we've reached the current one
         if (Vector2.Distance(transform.position, TargetPosition) < 0.01f)
         {
+            // Snap exactly to avoid floating point drift
             transform.position = TargetPosition;
 
+            // If there's input, try to move one tile in that direction
             if (MoveInput != Vector2.zero)
             {
-                // Check if the next tile is walkable before setting it as a target
-                if (IsPathClear(TargetPosition + (MoveInput * TileSize)))
+                Vector2 nextTile = TargetPosition + (MoveInput * TileSize);
+
+                // Only move if the path is not blocked
+                if (IsPathClear(nextTile))
                 {
-                    TargetPosition += MoveInput * TileSize;
+                    TargetPosition = nextTile;
                 }
             }
         }
-
-        FlipSprite();
-
-        #region Animation
-        IsMoving = Vector2.Distance(transform.position, TargetPosition) > 0.01f;
-        PlayerAnimator.SetBool("IsMoving", IsMoving);
-        #endregion
     }
 
-    // New method to check for obstacles
-    private bool IsPathClear(Vector2 TargetPos)
+    /// <summary>
+    /// Checks if a tile position is free of obstacles.
+    /// </summary>
+    private bool IsPathClear(Vector2 targetPos)
     {
-        // Checks if there's a collider in the ObstacleLayer at the target tile
-        // The radius (0.2f) should be smaller than your TileSize
-        return !Physics2D.OverlapCircle(TargetPos, 0.2f, ObstacleLayer);
+        // Small radius so we only check within the tile
+        return !Physics2D.OverlapCircle(targetPos, 0.2f, ObstacleLayer);
     }
 
+    #endregion
+
+
+    #region === Input System ===
+
+    /// <summary>
+    /// Called by the Input System. Snaps movement to cardinal directions only.
+    /// </summary>
     public void Move(InputAction.CallbackContext Context)
     {
-        Vector2 RawInput = Context.ReadValue<Vector2>();
+        Vector2 rawInput = Context.ReadValue<Vector2>();
 
-        if (Mathf.Abs(RawInput.x) > Mathf.Abs(RawInput.y))
+        // Prioritize the axis with the stronger input
+        if (Mathf.Abs(rawInput.x) > Mathf.Abs(rawInput.y))
         {
-            MoveInput = new Vector2(RawInput.x > 0 ? 1 : -1, 0);
+            MoveInput = new Vector2(rawInput.x > 0 ? 1 : -1, 0);
         }
-        else if (Mathf.Abs(RawInput.y) > Mathf.Abs(RawInput.x))
+        else if (Mathf.Abs(rawInput.y) > Mathf.Abs(rawInput.x))
         {
-            MoveInput = new Vector2(0, RawInput.y > 0 ? 1 : -1);
+            MoveInput = new Vector2(0, rawInput.y > 0 ? 1 : -1);
         }
         else
         {
@@ -81,9 +123,25 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    #endregion
+
+
+    #region === Animation ===
+
+    private void HandleAnimation()
+    {
+        IsMoving = Vector2.Distance(transform.position, TargetPosition) > 0.01f;
+        PlayerAnimator.SetBool("IsMoving", IsMoving);
+    }
+
+    #endregion
+
+
+    #region === Sprite Facing / Rotation ===
+
     private void FlipSprite()
     {
-        // Horizontal Scaling
+        // ----- Horizontal Facing (flip scale) -----
         if (MoveInput.x > 0)
         {
             IsFacingLeft = false;
@@ -97,24 +155,31 @@ public class PlayerMovement : MonoBehaviour
             transform.localRotation = Quaternion.Euler(0, 0, 0);
         }
 
-        // Vertical Rotations
+        // ----- Vertical Facing (rotate sprite) -----
         if (MoveInput.y > 0) // Up
         {
             IsFacingUp = true;
             IsFacingDown = false;
-            transform.localRotation = IsFacingLeft ? Quaternion.Euler(0, 0, -90) : Quaternion.Euler(0, 0, 90);
+            transform.localRotation = IsFacingLeft
+                ? Quaternion.Euler(0, 0, -90)
+                : Quaternion.Euler(0, 0, 90);
         }
         else if (MoveInput.y < 0) // Down
         {
             IsFacingUp = false;
             IsFacingDown = true;
-            transform.localRotation = IsFacingLeft ? Quaternion.Euler(0, 0, 90) : Quaternion.Euler(0, 0, -90);
+            transform.localRotation = IsFacingLeft
+                ? Quaternion.Euler(0, 0, 90)
+                : Quaternion.Euler(0, 0, -90);
         }
 
+        // If moving horizontally, clear vertical facing flags
         if (MoveInput.x != 0)
         {
             IsFacingDown = false;
             IsFacingUp = false;
         }
     }
+
+    #endregion
 }
