@@ -28,7 +28,8 @@ public class EnemyBehavior : MonoBehaviour
     public float EnemyYPosition;
     public float PlayerXPosition;
     public float PlayerYPosition;
-    public float GhostChance = 0.25f; // 25% Chance for Enemies to Ghost
+    public float GhostChance = 0.10f; // % Chance for Enemies to Ghost.
+                                      // Make sure it's low, enemies are gonna smash their heads against walls A LOT
 
     //GameObject Variables
     public GameObject PlayerObj = null;
@@ -39,6 +40,7 @@ public class EnemyBehavior : MonoBehaviour
     // Vector2 Variables
     public Vector2 MoveInput;        // Current snapped directional input
     public Vector2 TargetPosition;   // The grid position we are moving toward
+    public Vector2 nextTile;         // Butt ugly hack to get this to work.
 
     #endregion
 
@@ -75,6 +77,7 @@ public class EnemyBehavior : MonoBehaviour
 
     #endregion
 
+    // Keep this next region closed if you don't want to see a mess of code...
     #region === Detect Player Location ===
 
     private void DetectPlayerLocation()
@@ -85,13 +88,28 @@ public class EnemyBehavior : MonoBehaviour
         PlayerXPosition = PlayerObj.transform.position.x;
         PlayerYPosition = PlayerObj.transform.position.y;
         //Debug.Log("Enemy Position: X = " + EnemyXPosition + " --- Y = " + EnemyYPosition);
-        Debug.Log("Player Position: X = " + PlayerXPosition + " --- Y = " + PlayerYPosition);
+        //Debug.Log("Player Position: X = " + PlayerXPosition + " --- Y = " + PlayerYPosition);
 
         if (PlayerXPosition < EnemyXPosition && PlayerYPosition < EnemyYPosition) // Player is to the bottom left
         {
             Debug.Log("Player is at the Bottom Left!");
             MoveInput = new Vector2(0, -1);
             EnemyMove();
+            if (!IsPathClear(nextTile))
+            {
+                MoveInput = new Vector2(-1, 0);
+                EnemyMove();
+                if (!IsPathClear(nextTile))
+                {
+                    MoveInput = new Vector2(1, 0);
+                    EnemyMove();
+                    if (!IsPathClear(nextTile))
+                    {
+                        MoveInput = new Vector2(0, 1);
+                        EnemyMove();
+                    }
+                }
+            }
         }
 
         if (PlayerXPosition > EnemyXPosition && PlayerYPosition > EnemyYPosition) // Player is to the top right
@@ -99,6 +117,21 @@ public class EnemyBehavior : MonoBehaviour
             Debug.Log("Player is at the Top Right!");
             MoveInput = new Vector2(0, 1);
             EnemyMove();
+            if (!IsPathClear(nextTile))
+            {
+                MoveInput = new Vector2(1, 0);
+                EnemyMove();
+                if (!IsPathClear(nextTile))
+                {
+                    MoveInput = new Vector2(-1, 0);
+                    EnemyMove();
+                    if (!IsPathClear(nextTile))
+                    {
+                        MoveInput = new Vector2(0, -1);
+                        EnemyMove();
+                    }
+                }
+            }
         }
 
         if (PlayerXPosition < EnemyXPosition && PlayerYPosition > EnemyYPosition) // Player is to the top left
@@ -106,6 +139,21 @@ public class EnemyBehavior : MonoBehaviour
             Debug.Log("Player is at the Top Left!");
             MoveInput = new Vector2(0, 1);
             EnemyMove();
+            if (!IsPathClear(nextTile))
+            {
+                MoveInput = new Vector2(-1, 0);
+                EnemyMove();
+                if (!IsPathClear(nextTile))
+                {
+                    MoveInput = new Vector2(1, 0);
+                    EnemyMove();
+                    if (!IsPathClear(nextTile))
+                    {
+                        MoveInput = new Vector2(0, -1);
+                        EnemyMove();
+                    }
+                }
+            }
         }
 
         if (PlayerXPosition > EnemyXPosition && PlayerYPosition < EnemyYPosition) // Player is to the bottom right
@@ -113,6 +161,21 @@ public class EnemyBehavior : MonoBehaviour
             Debug.Log("Player is at the Bottom Right!");
             MoveInput = new Vector2(0, -1);
             EnemyMove();
+            if (!IsPathClear(nextTile))
+            {
+                MoveInput = new Vector2(1, 0);
+                EnemyMove();
+                if (!IsPathClear(nextTile))
+                {
+                    MoveInput = new Vector2(-1, 0);
+                    EnemyMove();
+                    if (!IsPathClear(nextTile))
+                    {
+                        MoveInput = new Vector2(0, -1);
+                        EnemyMove();
+                    }
+                }
+            }
         }
 
         if (PlayerXPosition == EnemyXPosition && PlayerYPosition < EnemyYPosition) // Player is directly below
@@ -120,6 +183,21 @@ public class EnemyBehavior : MonoBehaviour
             Debug.Log("Player is Below!");
             MoveInput = new Vector2(0, -1);
             EnemyMove();
+            if (!IsPathClear(nextTile))
+            {
+                MoveInput = new Vector2(1, 0);
+                EnemyMove();
+                if (!IsPathClear(nextTile))
+                {
+                    MoveInput = new Vector2(-1, 0);
+                    EnemyMove();
+                    if (!IsPathClear(nextTile))
+                    {
+                        MoveInput = new Vector2(0, 1);
+                        EnemyMove();
+                    }
+                }
+            }
         }
 
         if (PlayerXPosition == EnemyXPosition && PlayerYPosition > EnemyYPosition) // Player is directly above
@@ -127,6 +205,21 @@ public class EnemyBehavior : MonoBehaviour
             Debug.Log("Player is Above!");
             MoveInput = new Vector2(0, 1);
             EnemyMove();
+            if (!IsPathClear(nextTile))
+            {
+                MoveInput = new Vector2(1, 0);
+                EnemyMove();
+                if (!IsPathClear(nextTile))
+                {
+                    MoveInput = new Vector2(-1, 0);
+                    EnemyMove();
+                    if (!IsPathClear(nextTile))
+                    {
+                        MoveInput = new Vector2(0, -1);
+                        EnemyMove();
+                    }
+                }
+            }
         }
 
         if (PlayerXPosition > EnemyXPosition && PlayerYPosition == EnemyYPosition) // Player is directly to the right
@@ -134,6 +227,21 @@ public class EnemyBehavior : MonoBehaviour
             Debug.Log("Player is to the Right!");
             MoveInput = new Vector2(1, 0);
             EnemyMove();
+            if (!IsPathClear(nextTile))
+            {
+                MoveInput = new Vector2(0, 1);
+                EnemyMove();
+                if (!IsPathClear(nextTile))
+                {
+                    MoveInput = new Vector2(0, -1);
+                    EnemyMove();
+                    if (!IsPathClear(nextTile))
+                    {
+                        MoveInput = new Vector2(-1, 0);
+                        EnemyMove();
+                    }
+                }
+            }
         }
 
         if (PlayerXPosition < EnemyXPosition && PlayerYPosition == EnemyYPosition) // Player is directly to the left
@@ -141,6 +249,21 @@ public class EnemyBehavior : MonoBehaviour
             Debug.Log("Player is to the Left!");
             MoveInput = new Vector2(-1, 0);
             EnemyMove();
+            if (!IsPathClear(nextTile))
+            {
+                MoveInput = new Vector2(0, 1);
+                EnemyMove();
+                if (!IsPathClear(nextTile))
+                {
+                    MoveInput = new Vector2(0, -1);
+                    EnemyMove();
+                    if (!IsPathClear(nextTile))
+                    {
+                        MoveInput = new Vector2(1, 0);
+                        EnemyMove();
+                    }
+                }
+            }
         }
     }
 
