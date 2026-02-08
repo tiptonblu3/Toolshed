@@ -88,14 +88,29 @@ public class PlayerMovement : MonoBehaviour
     }
 
     /// <summary>
-    /// Checks if a tile position is free of obstacles.
+    /// Checks if a tile position is free of objects tagged "Obstacle".
     /// </summary>
-    private bool IsPathClear(Vector2 targetPos)
+    private bool IsPathClear(Vector2 TargetPos)
     {
-        // Small radius so we only check within the tile
-        return !Physics2D.OverlapCircle(targetPos, 0.2f, ObstacleLayer);
-    }
+        // 1. Find any collider at the target position
+        Collider2D hit = Physics2D.OverlapCircle(TargetPos, 0.2f);
 
+        // 2. If we hit nothing, the path is clear
+        if (hit == null) return true;
+
+        // 3. If we hit ourselves (the player), the path is still technically clear
+        if (hit.gameObject == gameObject) return true;
+
+        // 4. If we hit something tagged "Obstacle", the path is blocked
+        if (hit.CompareTag("Obstacle"))
+        {
+            Debug.Log("Path blocked by an Obstacle tag!");
+            return false;
+        }
+
+        // Default to clear if it's just a background tile or something without the tag
+        return true;
+    }
     #endregion
 
 
