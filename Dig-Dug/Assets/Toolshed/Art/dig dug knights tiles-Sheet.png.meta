@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 04129d5f66005f848aad84bb4e38b4a6
+guid: a39792f5b68e5124cbd78adb6a9608fb
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -742,7 +742,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: ec80f1fff285d3445aaaace5f6d18d88
+    spriteID: da1988188806e68488a2dd0ce8f3622d
     internalID: 0
     vertices: []
     indices: 
@@ -752,7 +752,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":7.0,"y":5.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       dig dug knights tiles-Sheet_0: -6020985958310062455
       dig dug knights tiles-Sheet_1: 2766321561644373342
