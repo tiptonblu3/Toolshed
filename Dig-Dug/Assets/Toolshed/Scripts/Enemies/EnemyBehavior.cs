@@ -1,9 +1,11 @@
-using UnityEngine;
+/* using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
 public class EnemyBehavior : MonoBehaviour
 {
+    #region === Variables ===
+
     // Variables
 
     // Float Variables
@@ -17,6 +19,8 @@ public class EnemyBehavior : MonoBehaviour
 
     // Vector2 Variables
     private Vector2 Target;
+
+    #endregion
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -75,3 +79,4 @@ public class EnemyBehavior : MonoBehaviour
     }
 
 }
+*/
