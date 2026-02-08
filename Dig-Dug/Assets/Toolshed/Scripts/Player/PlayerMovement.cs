@@ -26,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
     public Vector2 MoveInput;        // Current snapped directional input
     public Vector2 TargetPosition;   // The grid position we are moving toward
 
+    public bool CanMove = true;          // Whether the player can currently move (e.g., not while attacking)
     public bool IsMoving;
     public bool IsFacingLeft = false;
     public bool IsFacingUp = false;
@@ -122,19 +123,21 @@ public class PlayerMovement : MonoBehaviour
     public void Move(InputAction.CallbackContext Context)
     {
         Vector2 rawInput = Context.ReadValue<Vector2>();
-
-        // Prioritize the axis with the stronger input
-        if (Mathf.Abs(rawInput.x) > Mathf.Abs(rawInput.y))
+        if (CanMove == true)
         {
-            MoveInput = new Vector2(rawInput.x > 0 ? 1 : -1, 0);
-        }
-        else if (Mathf.Abs(rawInput.y) > Mathf.Abs(rawInput.x))
-        {
-            MoveInput = new Vector2(0, rawInput.y > 0 ? 1 : -1);
-        }
-        else
-        {
-            MoveInput = Vector2.zero;
+            // Prioritize the axis with the stronger input
+            if (Mathf.Abs(rawInput.x) > Mathf.Abs(rawInput.y))
+            {
+                MoveInput = new Vector2(rawInput.x > 0 ? 1 : -1, 0);
+            }
+            else if (Mathf.Abs(rawInput.y) > Mathf.Abs(rawInput.x))
+            {
+                MoveInput = new Vector2(0, rawInput.y > 0 ? 1 : -1);
+            }
+            else
+            {
+                MoveInput = Vector2.zero;
+            }
         }
     }
 

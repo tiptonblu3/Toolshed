@@ -74,6 +74,7 @@ public class PlayerDig : MonoBehaviour
         IsDigging = false;
         DigTimer = 0f;
         CurrentTile = null;
+        //MoveSpeedScript.CanMove = true; // Allow player to move again
 
         // Restore normal movement speed
         if (MoveSpeedScript != null)
@@ -94,6 +95,8 @@ public class PlayerDig : MonoBehaviour
             CurrentTile = Other;
             IsDigging = true;
             DigTimer = 0f;
+            //MoveSpeedScript.CanMove = false; // Prevent player from moving while digging
+            //MoveSpeedScript.MoveInput = Vector2.zero; // Stop player movement immediately when starting to dig
 
             // Slow player while digging
             if (MoveSpeedScript != null)
