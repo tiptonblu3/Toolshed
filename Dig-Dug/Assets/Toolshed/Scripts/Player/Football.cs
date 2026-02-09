@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class Football : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class Football : MonoBehaviour
     public float Speed = 10f;          // How fast the football travels
     public float MaxDistance = 3f;     // How far it can travel before despawning
     public int Damage = 1;             // Damage to apply on hit (handled elsewhere)
+    public int Score = 0;
 
     #endregion
 
@@ -27,6 +29,7 @@ public class Football : MonoBehaviour
         InitializeStartPosition();
         FindPlayer();
         LaunchInPlayerFacingDirection();
+        ScoreInfo();
     }
 
     void Update()
@@ -64,6 +67,12 @@ public class Football : MonoBehaviour
         }
     }
 
+    public void ScoreInfo()
+    {
+        // Initialize local score counter (player's persistent stats should be handled on the PlayerStats component)
+        Score = 0;
+    }
+
     /// <summary>
     /// Sets the football's velocity based on the direction the player is facing.
     /// </summary>
@@ -71,6 +80,7 @@ public class Football : MonoBehaviour
     {
         GameObject PlayerObj = GameObject.FindWithTag("Player");
         PlayerMovement playerMovement = PlayerObj.GetComponent<PlayerMovement>();
+        
 
         bool IsFacingDown = playerMovement.IsFacingDown;
         bool IsFacingUp = playerMovement.IsFacingUp;
@@ -142,6 +152,8 @@ public class Football : MonoBehaviour
         // Hit an enemy — damage would be applied in the enemy script
         if (collision.CompareTag("Enemy"))
         {
+            Debug.LogWarning("Score = " + Score);
+            Score += 100;
             Destroy(gameObject);
         }
     }
