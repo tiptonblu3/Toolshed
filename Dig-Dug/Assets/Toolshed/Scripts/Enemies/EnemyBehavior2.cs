@@ -329,6 +329,12 @@ public class EnemyBehavior : MonoBehaviour
             Debug.Log("Path blocked by an Obstacle tag!");
             return false;
         }
+        
+        if (hit.CompareTag("Ground"))
+        {
+            Debug.Log("Path blocked by a Ground tag!");
+            return false;
+        }
 
         // 5. If we hit the Player, the path is also technically clear, we just need to kill the player
         if (hit.gameObject == PlayerObj)
