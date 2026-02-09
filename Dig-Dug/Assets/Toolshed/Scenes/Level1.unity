@@ -7554,7 +7554,7 @@ MonoBehaviour:
   IsFacingUp: 0
   IsFacingDown: 0
   IsPuff: 0
-  MoveSpeed: 1
+  MoveSpeed: 0.5
   TileSize: 1
   EnemyXPosition: 0
   EnemyYPosition: 0

@@ -9,7 +9,8 @@ public class Football : MonoBehaviour
     public float Speed = 10f;          // How fast the football travels
     public float MaxDistance = 3f;     // How far it can travel before despawning
     public int Damage = 1;             // Damage to apply on hit (handled elsewhere)
-    public int Score = 0;
+    public PlayerStats Score;
+    private PlayerStats Stats;
 
     #endregion
 
@@ -70,7 +71,7 @@ public class Football : MonoBehaviour
     public void ScoreInfo()
     {
         // Initialize local score counter (player's persistent stats should be handled on the PlayerStats component)
-        Score = 0;
+        Stats = Player.GetComponent<PlayerStats>();
     }
 
     /// <summary>
@@ -152,8 +153,9 @@ public class Football : MonoBehaviour
         // Hit an enemy — damage would be applied in the enemy script
         if (collision.CompareTag("Enemy"))
         {
-            Debug.LogWarning("Score = " + Score);
-            Score += 100;
+            //Debug.LogWarning("Score = " + Stats.Score);
+            Stats.Score += 100;
+            Debug.LogWarning("Football hit an enemy, score increased by 100! New Score = " + Stats.Score);
             Destroy(gameObject);
         }
     }
