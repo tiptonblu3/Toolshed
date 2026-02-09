@@ -1616,6 +1616,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyBehaviorWIP
   MoveSpeed: 2.5
+  TileSize: 1
   playerTarget: {fileID: 1418320999}
   rb: {fileID: 251899723}
 --- !u!61 &251899722

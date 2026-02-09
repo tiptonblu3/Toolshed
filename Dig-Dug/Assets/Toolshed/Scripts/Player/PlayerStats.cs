@@ -1,3 +1,4 @@
+using UnityEditor.AdaptivePerformance.Editor;
 using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
@@ -8,6 +9,10 @@ public class PlayerStats : MonoBehaviour
     public bool GameOver = false;
     public bool IsInvincible = false; //For Cheat Mode
     public int Score = 0;
+    public int HighScore;
+    public static PlayerStats Instance { get; private set; }
+
+    
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -60,6 +65,8 @@ public class PlayerStats : MonoBehaviour
                     IsDead = true;
                     GameOver = true;
                     // Handle player death (e.g., trigger game over)
+                    HighScore=Score;
+                    Score=0;
                 }
                 else
                 {
@@ -70,4 +77,6 @@ public class PlayerStats : MonoBehaviour
             }
         }
     }
+
+    
 }
