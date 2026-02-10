@@ -156,7 +156,7 @@ public class Football : MonoBehaviour
         if (collision.CompareTag("Enemy"))
         {
             //Debug.LogWarning("Score = " + Stats.Score);
-            SaveScoreKey = Stats.Score + 100;
+            SaveScoreKey = SaveScoreKey + 100;
             Debug.LogWarning("Football hit an enemy, score increased by 100! New Score = " + SaveScoreKey);
             
             // Save the score with a key name "PlayerScore"
