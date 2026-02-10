@@ -153,7 +153,7 @@ public class Football : MonoBehaviour
         }
 
         // Hit an enemy — damage would be applied in the enemy script
-        if (collision.CompareTag("Enemy"))
+        if (collision.CompareTag("Enemy") || collision.CompareTag("Puff"))
         {
             int currentTotal = PlayerPrefs.GetInt("PScore", 0);
             int newTotal = currentTotal + 100;

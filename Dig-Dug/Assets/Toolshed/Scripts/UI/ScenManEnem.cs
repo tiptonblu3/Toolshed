@@ -3,7 +3,9 @@ using UnityEngine.SceneManagement;
 public class ScenManEnem : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-     public string targetTag = "Enemy"; // Define the tag to look for in the Inspector
+    public string Citron = "Enemy"; // Define the tag to look for in the Inspector
+    public string Puff = "Puff"; // Define the tag to look for in the Inspector
+
     public string targetSceneName; // Define the scene name in the Inspector
 
 
@@ -25,20 +27,21 @@ public class ScenManEnem : MonoBehaviour
      // Update is called once per frame
     void Update()
     {
-                int count = GameObject.FindGameObjectsWithTag(targetTag).Length;
-        GameObject foundObject = GameObject.FindWithTag(targetTag);
+                int count = GameObject.FindGameObjectsWithTag(Citron).Length + GameObject.FindGameObjectsWithTag(Puff).Length;
+        GameObject foundCitron = GameObject.FindWithTag(Citron);
+        GameObject foundPuff = GameObject.FindWithTag(Puff);
 
         // Check if the found object is not null
-        if (foundObject != null)
+        if (foundCitron == null && foundPuff == null)
         {
-            //There are still enemies on the scene.
+            LoadSceneByName(targetSceneName);//There are no more enemies on the scene.
             //Debug.LogWarning("Number of GameObjects with tag '" + targetTag + "': " + count);
 
             
         }
         else
         {
-            LoadSceneByName(targetSceneName);
+            
         }
 
     }
