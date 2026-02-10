@@ -4,6 +4,8 @@ public class Enemy : MonoBehaviour
 {
     #region === Settings ===
 
+    [SerializeField] private Animator EnemyAnimator;
+
     [SerializeField] private float MoveSpeed = 2.5f;              // Normal movement speed
     [SerializeField] private float GhostSpeedMultiplier = 0.4f;   // Speed reduction while ghosting through tiles
     [SerializeField] private float TileSize = 1.0f;               // Size of one grid step
@@ -72,6 +74,7 @@ public class Enemy : MonoBehaviour
         HandleStateTimer();
         HandleGridMovement();
         FlipSprite();
+        UpdateAnimations();
     }
 
     #endregion
@@ -342,6 +345,20 @@ public class Enemy : MonoBehaviour
             IsFacingDown = false;
             IsFacingUp = false;
         }
+    }
+
+    #endregion
+
+    #region === Animation ===
+
+    // For Animations
+
+    private void UpdateAnimations()
+    {
+        bool isMoving = CurrentMoveDir != Vector2.zero;
+
+        EnemyAnimator.SetBool("IsMoving", isMoving && !IsGhosting);
+        EnemyAnimator.SetBool("IsGhosting", IsGhosting);
     }
 
     #endregion
