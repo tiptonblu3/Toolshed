@@ -302,6 +302,15 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "Quit",
+                    "type": "Button",
+                    "id": "35c6083f-508b-492d-a804-01d087121226",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Submit",
                     "type": "Button",
                     "id": "a18500af-1686-4c21-9088-0cc2e23e7dca",
@@ -656,6 +665,28 @@
                     "action": "Navigate",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "8dccced6-fdbd-4be0-867c-9139f21979bc",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Quit",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "bbc9533e-a904-464c-9370-d7176bf6b244",
+                    "path": "<Gamepad>/select",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Quit",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 },
                 {
                     "name": "",
