@@ -5,6 +5,7 @@ public class PlayerDig : MonoBehaviour
     #region === Inspector / References ===
 
     public PlayerMovement MoveSpeedScript;   // Reference to movement so we can slow the player while digging
+    [SerializeField] private Animator PlayerAnimator;
 
     #endregion
 
@@ -15,6 +16,7 @@ public class PlayerDig : MonoBehaviour
     public float DigTime = 1f;       // How long it takes to dig a tile
     public float DigTimer;           // Current progress toward digging
     public bool IsDigging;           // Whether the player is actively digging
+    public Vector2 MoveInput;        // For getting the movement from PlayerMovement
 
     #endregion
 
@@ -30,6 +32,7 @@ public class PlayerDig : MonoBehaviour
     void FixedUpdate()
     {
         HandleDigTimer();
+        HandleAnimations();
     }
 
     #endregion
@@ -117,4 +120,51 @@ public class PlayerDig : MonoBehaviour
     }
 
     #endregion
+
+    #region === Animation ===
+
+    private void HandleAnimations()
+    {
+        if (PlayerAnimator == null || MoveSpeedScript == null)
+        {
+            return;
+        }
+
+        Vector2 Move = MoveSpeedScript.MoveInput;
+
+        PlayerAnimator.SetBool("IsDigging", false);
+
+        if (IsDigging)
+        {
+            // Digging Up and Down
+            if (Move.y < 0)
+            {
+                PlayerAnimator.SetBool("IsMoving", false);
+                PlayerAnimator.SetBool("IsDigging", true);
+            }
+            else if (Move.y > 0)
+            {
+                transform.localScale = new Vector2(1, 1);
+                PlayerAnimator.SetBool("IsMoving", false);
+                PlayerAnimator.SetBool("IsDigging", true);
+            }
+            // Digging left & right
+            else if (Move.x != 0)
+            {
+                if (Move.x < 0)
+                {
+                    transform.localScale = new Vector2(-1, 1);
+                }
+                else
+                {
+                    transform.localScale = new Vector2(1, 1);
+                }
+                PlayerAnimator.SetBool("IsMoving", false);
+                PlayerAnimator.SetBool("IsDigging", true);
+            }
+        }
+    }
+
+    #endregion
+
 }

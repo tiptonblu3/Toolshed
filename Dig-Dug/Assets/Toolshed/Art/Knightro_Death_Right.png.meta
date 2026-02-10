@@ -1,19 +1,16 @@
 fileFormatVersion: 2
-guid: 04941dab657695442bfaecaaf4943630
+guid: 059cf3f98c332d44499c8c90b7d7ddf8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1280041061098920031
-    second: Puff_Walk_Left_0
+      213: -3579023348394137330
+    second: Knightro_Death_Right_0
   - first:
-      213: -6755000497517440235
-    second: Puff_Walk_Left_1
+      213: -7530486325266728962
+    second: Knightro_Death_Right_1
   - first:
-      213: 2572547359916608956
-    second: Puff_Walk_Left_2
-  - first:
-      213: 5080012128982547044
-    second: Puff_Walk_Left_3
+      213: -4417529717476172414
+    second: Knightro_Death_Right_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,7 +106,7 @@ TextureImporter:
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: 4
+    textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -122,7 +119,7 @@ TextureImporter:
     buildTarget: WindowsStoreApps
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: 4
+    textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -135,7 +132,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Puff_Walk_Left_0
+      name: Knightro_Death_Right_0
       rect:
         serializedVersion: 2
         x: 0
@@ -150,14 +147,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1a7e847df616c3ee0800000000000000
-      internalID: -1280041061098920031
+      spriteID: e0963242a31c45ec0800000000000000
+      internalID: -3579023348394137330
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Puff_Walk_Left_1
+      name: Knightro_Death_Right_1
       rect:
         serializedVersion: 2
         x: 32
@@ -172,14 +169,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 513d2e746da6142a0800000000000000
-      internalID: -6755000497517440235
+      spriteID: ef73a8cd5965e7790800000000000000
+      internalID: -7530486325266728962
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Puff_Walk_Left_2
+      name: Knightro_Death_Right_2
       rect:
         serializedVersion: 2
         x: 64
@@ -194,14 +191,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cbdc2b3a13683b320800000000000000
-      internalID: 2572547359916608956
+      spriteID: 28dd9158028c1b2c0800000000000000
+      internalID: -4417529717476172414
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Puff_Walk_Left_3
+      name: Knightro_Death_Right_3
       rect:
         serializedVersion: 2
         x: 96
@@ -214,10 +211,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 46a3ea2cd14df7640800000000000000
-      internalID: 5080012128982547044
+      spriteID: 3c47d3df4e04b1c4189c615a73c8de9c
+      internalID: 469860697
       vertices: []
       indices: 
       edges: []
@@ -226,7 +223,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 7c95cbc4f4cdb414d93a3a447a2b0cb2
+    spriteID: 3c4ddff667fed7b4fbfd3fe01e2ca685
     internalID: 0
     vertices: []
     indices: 
@@ -238,10 +235,10 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Puff_Walk_Left_0: -1280041061098920031
-      Puff_Walk_Left_1: -6755000497517440235
-      Puff_Walk_Left_2: 2572547359916608956
-      Puff_Walk_Left_3: 5080012128982547044
+      Knightro_Death_Right_0: -3579023348394137330
+      Knightro_Death_Right_1: -7530486325266728962
+      Knightro_Death_Right_2: -4417529717476172414
+      Knightro_Death_Right_3: 469860697
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
