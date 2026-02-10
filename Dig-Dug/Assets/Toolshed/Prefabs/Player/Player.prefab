@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5234280624504547392
+--- !u!1 &2969591273744057607
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,7 +8,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5714318642526604923}
+  - component: {fileID: 4650578919405325269}
   m_Layer: 0
   m_Name: FirePoint
   m_TagString: Untagged
@@ -16,22 +16,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5714318642526604923
+--- !u!4 &4650578919405325269
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5234280624504547392}
+  m_GameObject: {fileID: 2969591273744057607}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.375, y: 0.1875, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4261543441407613374}
+  m_Father: {fileID: 4580883500165954034}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &5563424647105755635
+--- !u!1 &3118247970886546387
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -39,47 +39,16 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7428935547123753328}
-  m_Layer: 0
-  m_Name: Digdug Knightro_0
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &7428935547123753328
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5563424647105755635}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 1
-  m_Children: []
-  m_Father: {fileID: 4261543441407613374}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &5569684841443889512
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4261543441407613374}
-  - component: {fileID: 9030851630115780134}
-  - component: {fileID: 6028324814652520536}
-  - component: {fileID: 6977407498788442421}
-  - component: {fileID: 5781580053347496448}
-  - component: {fileID: 2143122175869967380}
-  - component: {fileID: 9213903385190678390}
-  - component: {fileID: 3893944654445950825}
-  - component: {fileID: 1945403506480492565}
-  - component: {fileID: 3763976568761489518}
+  - component: {fileID: 4580883500165954034}
+  - component: {fileID: 4826304934308954531}
+  - component: {fileID: 8647168815479035298}
+  - component: {fileID: 489733277888583409}
+  - component: {fileID: 3464090606453306408}
+  - component: {fileID: 5365496788890848839}
+  - component: {fileID: 5081015737176183784}
+  - component: {fileID: 8833107244441935262}
+  - component: {fileID: 8223002008919929978}
+  - component: {fileID: 6249896978826393492}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -87,31 +56,31 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4261543441407613374
+--- !u!4 &4580883500165954034
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5569684841443889512}
+  m_GameObject: {fileID: 3118247970886546387}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.5, y: 0.5, z: 0}
+  m_LocalPosition: {x: 0.5, y: 3.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 7428935547123753328}
-  - {fileID: 5714318642526604923}
+  - {fileID: 368272187751992826}
+  - {fileID: 4650578919405325269}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &9030851630115780134
+--- !u!50 &4826304934308954531
 Rigidbody2D:
   serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5569684841443889512}
+  m_GameObject: {fileID: 3118247970886546387}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -131,13 +100,13 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &6028324814652520536
+--- !u!61 &8647168815479035298
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5569684841443889512}
+  m_GameObject: {fileID: 3118247970886546387}
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
@@ -177,57 +146,61 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.5, y: 0.8}
   m_EdgeRadius: 0
---- !u!114 &6977407498788442421
+--- !u!114 &489733277888583409
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5569684841443889512}
+  m_GameObject: {fileID: 3118247970886546387}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 63cb4994cc6fcea4490b3574f1a954dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerDig
   MoveSpeedScript: {fileID: 0}
+  PlayerAnimator: {fileID: 8223002008919929978}
   CurrentTile: {fileID: 0}
   DigTime: 0.75
   DigTimer: 0
   IsDigging: 0
---- !u!114 &5781580053347496448
+  MoveInput: {x: 0, y: 0}
+--- !u!114 &3464090606453306408
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5569684841443889512}
+  m_GameObject: {fileID: 3118247970886546387}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 24aa2e6f52e27924bbc5491891df39f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerStats
+  PlayerAnimator: {fileID: 8223002008919929978}
   Health: 1
   Lives: 3
   IsDead: 0
   GameOver: 0
   IsInvincible: 0
   Score: 0
---- !u!114 &2143122175869967380
+--- !u!114 &5365496788890848839
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5569684841443889512}
+  m_GameObject: {fileID: 3118247970886546387}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0e391fe248bb5224094cbdb9fbd81d52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  PlayerAnimator: {fileID: 0}
+  PlayerAnimator: {fileID: 8223002008919929978}
   ObstacleLayer:
     serializedVersion: 2
     m_Bits: 0
+  PlayerDigScript: {fileID: 0}
   MoveSpeed: 3
   TileSize: 1
   Rb: {fileID: 0}
@@ -238,30 +211,31 @@ MonoBehaviour:
   IsFacingLeft: 0
   IsFacingUp: 0
   IsFacingDown: 0
---- !u!114 &9213903385190678390
+--- !u!114 &5081015737176183784
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5569684841443889512}
+  m_GameObject: {fileID: 3118247970886546387}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e1a21a498e9120e4881fc5aecdee48cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAttack
+  PlayerAnimator: {fileID: 8223002008919929978}
   FootballPrefab: {fileID: 4982224238187528047, guid: 1e4cdafb3516cd140a411407721428ba, type: 3}
-  FirePoint: {fileID: 5714318642526604923}
+  FirePoint: {fileID: 4650578919405325269}
   CanAttack: 1
   FireAction: {fileID: -1383790030839574557, guid: 44c0669e9cb542b46b9830a71d8f0750, type: 3}
   MoveSpeedScript: {fileID: 0}
---- !u!114 &3893944654445950825
+--- !u!114 &8833107244441935262
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5569684841443889512}
+  m_GameObject: {fileID: 3118247970886546387}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
@@ -282,7 +256,7 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2143122175869967380}
+      - m_Target: {fileID: 5365496788890848839}
         m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
         m_MethodName: Move
         m_Mode: 0
@@ -368,19 +342,23 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: a546e9ae-ba95-4a50-98a9-cfacaecf7381
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 2a651fbf-267b-43d7-be41-68788faa3988
+    m_ActionName: 'UI/Select[/Mouse/leftButton]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!95 &1945403506480492565
+--- !u!95 &8223002008919929978
 Animator:
   serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5569684841443889512}
+  m_GameObject: {fileID: 3118247970886546387}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 6745abc4bb4ba404f819408fd9e7b669, type: 2}
@@ -395,14 +373,14 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!212 &3763976568761489518
+--- !u!212 &6249896978826393492
 SpriteRenderer:
   serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5569684841443889512}
+  m_GameObject: {fileID: 3118247970886546387}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -454,3 +432,34 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1 &4971357754021621320
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 368272187751992826}
+  m_Layer: 0
+  m_Name: Digdug Knightro_0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &368272187751992826
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4971357754021621320}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 4580883500165954034}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
