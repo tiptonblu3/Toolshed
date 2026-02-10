@@ -2017,6 +2017,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Citronaught (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8101549127291962794, guid: 65b4e93eb6a192d4987e0e7549f74ea8, type: 3}
+      propertyPath: MoveVerticalInGrace
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5453,8 +5457,30 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3118247970886546387, guid: 6d6a07d17e42d9c49924b7f64bf362cf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 942188368}
   m_SourcePrefab: {fileID: 100100000, guid: 6d6a07d17e42d9c49924b7f64bf362cf, type: 3}
+--- !u!1 &942188367 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3118247970886546387, guid: 6d6a07d17e42d9c49924b7f64bf362cf, type: 3}
+  m_PrefabInstance: {fileID: 942188366}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &942188368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 942188367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6ec3972020e08e43b7fffde9abdf663, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ScenManEnem
+  targetTag: Enemy
+  targetSceneName: Level8
 --- !u!4 &950588218 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6155456835006039173, guid: 84bf38d0e8eb23c46a8223bcdcfde394, type: 3}
@@ -8130,6 +8156,10 @@ PrefabInstance:
     - target: {fileID: 1542462621641297029, guid: 65b4e93eb6a192d4987e0e7549f74ea8, type: 3}
       propertyPath: m_Name
       value: Citronaught (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8101549127291962794, guid: 65b4e93eb6a192d4987e0e7549f74ea8, type: 3}
+      propertyPath: MoveVerticalInGrace
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

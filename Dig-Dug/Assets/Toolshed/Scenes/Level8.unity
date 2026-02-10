@@ -5626,8 +5626,30 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3118247970886546387, guid: 6d6a07d17e42d9c49924b7f64bf362cf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 946743864}
   m_SourcePrefab: {fileID: 100100000, guid: 6d6a07d17e42d9c49924b7f64bf362cf, type: 3}
+--- !u!1 &946743863 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3118247970886546387, guid: 6d6a07d17e42d9c49924b7f64bf362cf, type: 3}
+  m_PrefabInstance: {fileID: 946743862}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &946743864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 946743863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6ec3972020e08e43b7fffde9abdf663, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ScenManEnem
+  targetTag: Enemy
+  targetSceneName: Level9
 --- !u!4 &950588218 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6155456835006039173, guid: 84bf38d0e8eb23c46a8223bcdcfde394, type: 3}
@@ -11091,6 +11113,10 @@ PrefabInstance:
     - target: {fileID: 6487340884326466889, guid: c7867e907aec0324bbadf9c708dfdd0c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8857391261116473813, guid: c7867e907aec0324bbadf9c708dfdd0c, type: 3}
+      propertyPath: MoveVerticalInGrace
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

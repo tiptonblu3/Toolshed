@@ -4692,6 +4692,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Citronaught (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8101549127291962794, guid: 65b4e93eb6a192d4987e0e7549f74ea8, type: 3}
+      propertyPath: MoveVerticalInGrace
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

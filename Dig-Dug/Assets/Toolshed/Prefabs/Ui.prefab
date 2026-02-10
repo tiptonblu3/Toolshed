@@ -118,7 +118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f80518036e573f143b2ce32d377bd19e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::scoreManager
-  PlayerScore: {fileID: 0}
+  PScore: {fileID: 0}
   ScorePoints: {fileID: 2831616734115073206}
 --- !u!1 &827044426962540038
 GameObject:

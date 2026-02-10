@@ -11,19 +11,24 @@ public class HscoreManager : MonoBehaviour
 
     public void HScoreInfo()
     {
-        if (PlayerPrefs.GetInt("Highscore", 0) <= PlayerPrefs.GetInt("PScore", 0))
+        int lastRoundScore = PlayerPrefs.GetInt("PScore", 0);
+        int currentHighScore = PlayerPrefs.GetInt("Highscore", 0);
+        if (lastRoundScore >= currentHighScore)
         {
-            HighScore = PlayerPrefs.GetInt("PScore", 0);
-
+            HighScore = lastRoundScore;
             PlayerPrefs.SetInt("Highscore", HighScore);
-            PlayerPrefs.Save(); // Save the new high score to disk
+            PlayerPrefs.Save();
+        }
+        else
+        {
+            HighScore = currentHighScore;
         }
     }
 
     public void UpdateHScoreText()
     {
-        ScorePoints.text = HighScore.ToString();
-    }
+        ScorePoints.text = HighScore.ToString();   
+         }
 
 void Start()
     {

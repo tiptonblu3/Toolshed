@@ -1,4 +1,3 @@
-using UnityEditor.AdaptivePerformance.Editor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,7 +6,7 @@ public class PlayerStats : MonoBehaviour
 
     [SerializeField] private Animator PlayerAnimator;
     public int Health = 1;
-    public int Lives = 3;
+    public int Lives;
     public bool IsDead = false;
     public bool GameOver = false;
     public bool IsInvincible = false; //For Cheat Mode
@@ -16,6 +15,7 @@ public class PlayerStats : MonoBehaviour
     public static PlayerStats Instance { get; private set; }
 
     public int SaveScoreKey; // Key for saving score in PlayerPrefs
+    public int LivesData; // Variable to hold the number of lives for saving/loading
 
 
     void LoadSceneByName(string Level1)
@@ -26,7 +26,8 @@ public class PlayerStats : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+                Lives = PlayerPrefs.GetInt("LivesNum", 3);
+                PlayerPrefs.Save(); //update lives in PlayerPrefs
     }
 
     // Update is called once per frame
@@ -69,23 +70,24 @@ public class PlayerStats : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.LogWarning("Collision Detected");
+        
         // Example collision handling
-        if (collision.gameObject.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("Puff"))
         {
-            Debug.LogWarning("Collided with Enemy");
             Health -= 1; // Decrease health by 1 for each collision with an enemy
             if (Health <= 0)
             {
                 Lives--;
+                PlayerPrefs.SetInt("LivesNum", Lives); // Update lives in PlayerPrefs
+                PlayerPrefs.Save(); // Save the updated lives to disk
+
                 if (Lives <= 0)
                 {
                     IsDead = true;
                     GameOver = true;
                     // Handle player death (e.g., trigger game over)
                     PlayerAnimator.SetBool("IsDead", true);
-                    Score=0;
-                    SaveScoreKey = Score;
-                    // Save the score with a key name "PlayerScore"
+                    PlayerPrefs.SetInt("LivesNum", 3); // Update PlayerPrefs with reset lives
                     LoadSceneByName("GameOver");
                 }
                 else
@@ -94,10 +96,18 @@ public class PlayerStats : MonoBehaviour
                     PlayerAnimator.SetBool("IsDead", true);
                     ReloadCurrentScene();
 
+
                 }
             }
         }
     }
 
+// if (PlayerPrefs.GetInt("Highscore", 0) <= PlayerPrefs.GetInt("PScore", 0))
+//         {
+//             HighScore = PlayerPrefs.GetInt("PScore", 0);
+
+//             PlayerPrefs.SetInt("Highscore", HighScore);
+//             PlayerPrefs.Save(); // Save the new high score to disk
+//         }
     
 }
