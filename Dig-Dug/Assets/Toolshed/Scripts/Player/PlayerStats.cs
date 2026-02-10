@@ -66,12 +66,13 @@ public class PlayerStats : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.LogWarning("Collision Detected");
         // Example collision handling
         if (collision.gameObject.CompareTag("Enemy"))
         {
+            Debug.LogWarning("Collided with Enemy");
             Health -= 1; // Decrease health by 1 for each collision with an enemy
             if (Health <= 0)
             {
