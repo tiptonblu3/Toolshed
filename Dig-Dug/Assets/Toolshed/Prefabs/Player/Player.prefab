@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 4580883500165954034}
   - component: {fileID: 4826304934308954531}
   - component: {fileID: 8647168815479035298}
+  - component: {fileID: 7918181449209192021}
   - component: {fileID: 489733277888583409}
   - component: {fileID: 5365496788890848839}
   - component: {fileID: 5081015737176183784}
@@ -146,6 +147,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.5, y: 0.8}
   m_EdgeRadius: 0
+--- !u!114 &7918181449209192021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3118247970886546387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4a78ae862a422b458006430edcf20ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerQuit
+  QuitAction: {fileID: 47952622222010256, guid: 44c0669e9cb542b46b9830a71d8f0750, type: 3}
 --- !u!114 &489733277888583409
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -232,6 +246,7 @@ MonoBehaviour:
   Score: 0
   HighScore: 0
   SaveScoreKey: 0
+  LivesData: 0
 --- !u!114 &8833107244441935262
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -349,6 +364,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 2a651fbf-267b-43d7-be41-68788faa3988
     m_ActionName: 'UI/Select[/Mouse/leftButton]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: c272ba7e-3d8f-4a6a-8d90-3c2b77fc1d61
+    m_ActionName: 'Player/Quit[/Keyboard/escape]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
