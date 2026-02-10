@@ -181,6 +181,8 @@ MonoBehaviour:
   Damage: 1
   Score: {fileID: 0}
   SaveScoreKey: 0
+  DeathSound: {fileID: 0}
+  DeathSoundClip: {fileID: 8300000, guid: 9d96983a9486b16428de32ed22ca360b, type: 3}
   Player: {fileID: 0}
 --- !u!50 &6000860057503051497
 Rigidbody2D:

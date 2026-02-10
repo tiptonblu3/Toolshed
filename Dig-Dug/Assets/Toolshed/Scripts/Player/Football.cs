@@ -14,6 +14,10 @@ public class Football : MonoBehaviour
 
     public int SaveScoreKey; // Key for saving score in PlayerPrefs
 
+    public AudioSource DeathSoundPlayer;
+    public AudioClip DeathSoundClip;
+    
+
     #endregion
 
 
@@ -63,6 +67,7 @@ public class Football : MonoBehaviour
         if (PlayerObj != null)
         {
             Player = PlayerObj.transform;
+            DeathSoundPlayer = PlayerObj.GetComponent<AudioSource>();
         }
         else
         {
@@ -158,7 +163,13 @@ public class Football : MonoBehaviour
             int currentTotal = PlayerPrefs.GetInt("PScore", 0);
             int newTotal = currentTotal + 100;
             Debug.LogWarning("Football hit an enemy, score increased by 100! New Score = " + newTotal);
-            
+
+            // Play the death sound
+            if (DeathSoundPlayer != null && DeathSoundClip != null)
+            {
+                AudioSource.PlayClipAtPoint(DeathSoundClip, transform.position);
+            }
+
             // Save the score with a key name "PlayerScore"
             PlayerPrefs.SetInt("PScore", newTotal);
             // Highly recommended: Force a save to disk immediately
@@ -168,6 +179,8 @@ public class Football : MonoBehaviour
             Destroy(collision.gameObject); // This destroys the enemy on hit, can be removed if you want to handle enemy health separately
         }
     }
+
+
 
     #endregion
 }
