@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private Animator PlayerAnimator;
     [SerializeField] private LayerMask ObstacleLayer; // What tiles count as walls/blocked
+    public PlayerDig PlayerDigScript; // Getting the digging script so we can control animation priority
 
     #endregion
 
@@ -42,6 +43,7 @@ public class PlayerMovement : MonoBehaviour
         // Cache required components
         Rb = GetComponent<Rigidbody2D>();
         PlayerAnimator = GetComponent<Animator>();
+        PlayerDigScript = GetComponent<PlayerDig>();
 
         // Ensure we start aligned perfectly to the grid
         TargetPosition = transform.position;
@@ -50,7 +52,13 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         HandleMovement();
-        HandleAnimation();
+
+        // This makes sure that, if the player is digging, it does not play the movement animation
+        if (!PlayerDigScript.IsDigging)
+        {
+            HandleAnimation();
+        }
+
         FlipSprite();
     }
 

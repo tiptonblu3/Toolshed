@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Toolshed/Scenes/MainMenu.unity
     guid: 9244c89976564b04b94d88844c8e0eef
   - enabled: 1
-    path: Assets/Toolshed/Scenes/Level1.unity
+    path: Assets/Toolshed/Scenes/TestLevel1.unity
     guid: 374932bfca1a82643a9e57713b532f86
   - enabled: 1
     path: Assets/Toolshed/Scenes/Level2.unity

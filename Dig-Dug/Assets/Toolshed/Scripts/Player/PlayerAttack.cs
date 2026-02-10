@@ -5,6 +5,8 @@ public class PlayerAttack : MonoBehaviour
 {
     #region === Inspector References ===
 
+    [SerializeField] private Animator PlayerAnimator;
+
     [Header("Settings")]
     public GameObject FootballPrefab;   // Projectile to spawn when attacking
     public Transform FirePoint;         // Where the projectile spawns from
@@ -55,6 +57,8 @@ public class PlayerAttack : MonoBehaviour
             Instantiate(FootballPrefab, FirePoint.position, FirePoint.rotation);
         }
 
+        PlayerAnimator.SetBool("IsThrowing", true);
+
         MoveSpeedScript.MoveInput = Vector2.zero;
         MoveSpeedScript.MoveSpeed = 1f; // Slow player while attacking
         MoveSpeedScript.CanMove = false; // Prevent player from moving while attacking
@@ -70,6 +74,8 @@ public class PlayerAttack : MonoBehaviour
     {
         MoveSpeedScript.MoveSpeed = 3f; // Reset player speed to normal value
         MoveSpeedScript.CanMove = true; // Allow player to move again
+
+        PlayerAnimator.SetBool("IsThrowing", false);
     }
 
     #endregion
