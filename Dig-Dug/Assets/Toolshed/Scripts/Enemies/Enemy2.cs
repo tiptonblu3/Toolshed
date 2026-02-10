@@ -26,6 +26,7 @@ public class Enemy2 : MonoBehaviour
 
     [Header("Grace Settings")]
     [SerializeField] private bool MoveVerticalInGrace = false;     // If true, patrol vertically instead of horizontally
+    private bool IsAttacking = false; // This is for animations
 
     #endregion
 
@@ -391,6 +392,7 @@ public class Enemy2 : MonoBehaviour
         nextFireTime = Time.time + fireRate;
 
         // Animation
+        IsAttacking = true;
         EnemyAnimator.SetBool("IsAttacking", true);
 
         // Only fire if required references are assigned
@@ -413,6 +415,7 @@ public class Enemy2 : MonoBehaviour
     {
         MoveSpeed = 2.5f; // Reset Puff speed to normal value
         CanMove = true; // Allow Puff to move again
+        IsAttacking = false;
         EnemyAnimator.SetBool("IsAttacking", false); // Animation
     }
 
@@ -424,6 +427,12 @@ public class Enemy2 : MonoBehaviour
 
     private void UpdateAnimations()
     {
+        if (IsAttacking)
+        {
+            EnemyAnimator.SetBool("IsMoving", false);
+            return;
+        }
+
         bool isMoving = CurrentMoveDir != Vector2.zero;
 
         EnemyAnimator.SetBool("IsMoving", isMoving && !IsGhosting);
