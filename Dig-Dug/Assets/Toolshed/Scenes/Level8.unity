@@ -11075,6 +11075,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Puff
       objectReference: {fileID: 0}
+    - target: {fileID: 7428055254104628075, guid: dc85e2ba68ff914488ddaca3b2f3b155, type: 3}
+      propertyPath: MoveVerticalInGrace
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7487732999569095840, guid: dc85e2ba68ff914488ddaca3b2f3b155, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.5

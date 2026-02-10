@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7903354017944236721}
   m_Layer: 0
   m_Name: Puff
-  m_TagString: Enemy
+  m_TagString: Puff
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

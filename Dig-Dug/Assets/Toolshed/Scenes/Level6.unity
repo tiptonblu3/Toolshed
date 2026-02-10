@@ -4094,6 +4094,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2340594696556290612, guid: 6d6a07d17e42d9c49924b7f64bf362cf, type: 3}
+      propertyPath: Health
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3118247970886546387, guid: 6d6a07d17e42d9c49924b7f64bf362cf, type: 3}
       propertyPath: m_Name
       value: Player
@@ -8787,6 +8791,10 @@ PrefabInstance:
     - target: {fileID: 2657654700117060736, guid: dc85e2ba68ff914488ddaca3b2f3b155, type: 3}
       propertyPath: m_Name
       value: Puff
+      objectReference: {fileID: 0}
+    - target: {fileID: 7428055254104628075, guid: dc85e2ba68ff914488ddaca3b2f3b155, type: 3}
+      propertyPath: MoveVerticalInGrace
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7487732999569095840, guid: dc85e2ba68ff914488ddaca3b2f3b155, type: 3}
       propertyPath: m_LocalPosition.x
