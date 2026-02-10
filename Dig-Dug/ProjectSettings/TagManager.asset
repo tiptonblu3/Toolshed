@@ -11,6 +11,7 @@ TagManager:
   - BlockBreak
   - Puff
   - MusicPlayer
+  - Sky
   layers:
   - Default
   - TransparentFX

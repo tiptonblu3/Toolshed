@@ -111,7 +111,7 @@ public class PlayerMovement : MonoBehaviour
         if (hit.gameObject == gameObject) return true;
 
         // 4. If we hit something tagged "Obstacle", the path is blocked
-        if (hit.CompareTag("Obstacle"))
+        if (hit.CompareTag("Obstacle") || hit.CompareTag("Sky"))
         {
             Debug.Log("Path blocked by an Obstacle tag!");
             return false;
