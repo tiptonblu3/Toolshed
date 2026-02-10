@@ -12,6 +12,8 @@ public class Football : MonoBehaviour
     public PlayerStats Score;
     private PlayerStats Stats;
 
+    public int SaveScoreKey; // Key for saving score in PlayerPrefs
+
     #endregion
 
 
@@ -154,9 +156,16 @@ public class Football : MonoBehaviour
         if (collision.CompareTag("Enemy"))
         {
             //Debug.LogWarning("Score = " + Stats.Score);
-            Stats.Score += 100;
-            Debug.LogWarning("Football hit an enemy, score increased by 100! New Score = " + Stats.Score);
+            SaveScoreKey = Stats.Score + 100;
+            Debug.LogWarning("Football hit an enemy, score increased by 100! New Score = " + SaveScoreKey);
+            
+            // Save the score with a key name "PlayerScore"
+            PlayerPrefs.SetInt("PScore", SaveScoreKey);
+            // Highly recommended: Force a save to disk immediately
+            PlayerPrefs.Save();
+
             Destroy(gameObject);
+            Destroy(collision.gameObject); // This destroys the enemy on hit, can be removed if you want to handle enemy health separately
         }
     }
 

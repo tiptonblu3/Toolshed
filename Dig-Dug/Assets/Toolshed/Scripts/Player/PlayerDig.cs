@@ -1,3 +1,5 @@
+using JetBrains.Annotations;
+using UnityEditor;
 using UnityEngine;
 
 public class PlayerDig : MonoBehaviour
@@ -68,6 +70,7 @@ public class PlayerDig : MonoBehaviour
             StopDigging();
         }
     }
+
 
     /// <summary>
     /// Stops digging and resets movement + timers.

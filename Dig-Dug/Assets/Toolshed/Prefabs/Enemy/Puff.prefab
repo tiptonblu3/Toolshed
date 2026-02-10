@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6487340884326466889}
-  - component: {fileID: 2017535601880415600}
   - component: {fileID: 2339779722259077001}
+  - component: {fileID: 8857391261116473813}
   - component: {fileID: 6574140541868481879}
   - component: {fileID: 3568808202478681024}
   m_Layer: 0
@@ -32,35 +32,10 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 3154570109358518483}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2017535601880415600
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 717251867268545938}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9909ce7c9d22924ba1d91bf5d77e570, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  MoveSpeed: 2.5
-  GhostSpeedMultiplier: 0.4
-  TileSize: 1
-  MinGrace: 3
-  MaxGrace: 8
-  GhostCooldown: 10
-  LookAheadRange: 3
-  MoveVerticalInGrace: 0
-  IsFacingLeft: 0
-  IsFacingUp: 0
-  IsFacingDown: 0
-  IsGhosting: 0
-  IsGrace: 1
-  IsChasing: 0
 --- !u!212 &2339779722259077001
 SpriteRenderer:
   serializedVersion: 2
@@ -120,6 +95,38 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &8857391261116473813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 717251867268545938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09402ed34e1a886479e1667277244aa5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Enemy2
+  MoveSpeed: 2.5
+  GhostSpeedMultiplier: 0.4
+  TileSize: 1
+  MinGrace: 3
+  MaxGrace: 8
+  GhostCooldown: 10
+  fireRate: 1.5
+  attackRange: 2
+  CanAttack: 1
+  LookAheadRange: 3
+  MoveVerticalInGrace: 0
+  IsFacingLeft: 0
+  IsFacingUp: 0
+  IsFacingDown: 0
+  IsGhosting: 0
+  IsGrace: 1
+  IsChasing: 0
+  CanMove: 1
+  BubblesPrefab: {fileID: 1118136616044676662, guid: fdfca470508dd604ebc62f5534660c79, type: 3}
+  FirePoint: {fileID: 3154570109358518483}
 --- !u!61 &6574140541868481879
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -193,3 +200,34 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!1 &8297943172036250596
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3154570109358518483}
+  m_Layer: 0
+  m_Name: FirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3154570109358518483
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8297943172036250596}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.225, y: 0.062, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6487340884326466889}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

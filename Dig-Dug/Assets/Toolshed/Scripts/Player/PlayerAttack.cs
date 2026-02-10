@@ -11,6 +11,9 @@ public class PlayerAttack : MonoBehaviour
     public GameObject FootballPrefab;   // Projectile to spawn when attacking
     public Transform FirePoint;         // Where the projectile spawns from
     public bool CanAttack = true;          // Whether the player is currently allowed to attack (e.g., not while digging)
+    
+    [SerializeField] private float fireRate = 0.5f; // Time in seconds between allowed attacks
+    private float nextFireTime = 0f;                // Timestamp of when the player can fire again
 
     [Header("Input Reference")]
     // Named differently from the Fire() method to avoid confusion
@@ -51,6 +54,15 @@ public class PlayerAttack : MonoBehaviour
     /// </summary>
     public void Fire(InputAction.CallbackContext context)
     {
+        // Check if enough time has passed and if attacking is currently allowed
+        if (Time.time < nextFireTime || !CanAttack)
+        {
+            return;
+        }
+
+        // Set the next allowed fire time
+        nextFireTime = Time.time + fireRate;
+
         // Only fire if required references are assigned
         if (FootballPrefab != null && FirePoint != null)
         {

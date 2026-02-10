@@ -4,28 +4,32 @@ using TMPro;
 public class scoreManager : MonoBehaviour
 {
 
-    public PlayerStats PlayerScore;
+    public PlayerStats PScore;
     public TextMeshProUGUI ScorePoints;
 
     public void ScoreInfo()
     {
         GameObject PlayerObj = GameObject.FindWithTag("Player");
-        PlayerStats Stats = PlayerObj.GetComponent<PlayerStats>();
+        PScore = PlayerObj.GetComponent<PlayerStats>();
     }
 
     public void UpdateScoreText()
     {
-        ScorePoints.text = PlayerScore.Score.ToString();
     }
 
 void Start()
     {
         ScoreInfo();
+         // Load the score, defaulting to 0 if "PlayerScore" doesn't exist
+        int loadedScore = PlayerPrefs.GetInt("PScore", 0);
+        PScore.Score = loadedScore;
     }
 
 void Update()
     {
         UpdateScoreText();
+                ScorePoints.text = PScore.Score.ToString();
+
     }
 
 }
