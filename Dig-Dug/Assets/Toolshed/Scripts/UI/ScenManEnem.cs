@@ -4,6 +4,8 @@ public class ScenManEnem : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
      public string targetTag = "Enemy"; // Define the tag to look for in the Inspector
+    public string targetSceneName; // Define the scene name in the Inspector
+
 
      
      void LoadSceneByName(string Level1)
@@ -36,7 +38,7 @@ public class ScenManEnem : MonoBehaviour
         }
         else
         {
-            LoadSceneByName("Level2");
+            LoadSceneByName(targetSceneName);
         }
 
     }
