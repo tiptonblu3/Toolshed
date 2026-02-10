@@ -1,23 +1,7 @@
 fileFormatVersion: 2
-<<<<<<< Updated upstream
 guid: fa81df99e22a7b64ca0e983a4640d3f1
-=======
-guid: a33469e4f5dd6cb4187a736fdc02dc84
->>>>>>> Stashed changes
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: -2009491328394620056
-    second: Puff_Attack_Right_0
-  - first:
-      213: 1714645720908687561
-    second: Puff_Attack_Right_1
-  - first:
-      213: 2488842587410857811
-    second: Puff_Attack_Right_2
-  - first:
-      213: 8282493296400425518
-    second: Puff_Attack_Right_3
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -50,12 +34,12 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
     wrapV: 1
-    wrapW: 1
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -64,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -79,16 +63,16 @@ TextureImporter:
   compressionQualitySet: 0
   textureFormatSet: 0
   ignorePngGamma: 0
-  applyGammaDecoding: 0
+  applyGammaDecoding: 1
   swizzle: 50462976
-  cookieLightType: 0
+  cookieLightType: 2
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
+    textureFormat: 4
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -101,7 +85,33 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -116,20 +126,20 @@ TextureImporter:
       name: Puff_Attack_Right_0
       rect:
         serializedVersion: 2
-        x: 2
+        x: 0
         y: 0
-        width: 27
+        width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 8639fc7984adc14e0800000000000000
-      internalID: -2009491328394620056
+      spriteID: 5ec927d33d5a27e40aa96a0f8f8cb8f6
+      internalID: 1768888602
       vertices: []
       indices: 
       edges: []
@@ -138,20 +148,20 @@ TextureImporter:
       name: Puff_Attack_Right_1
       rect:
         serializedVersion: 2
-        x: 34
+        x: 32
         y: 0
-        width: 24
+        width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 9c8e766d235abc710800000000000000
-      internalID: 1714645720908687561
+      spriteID: fb2baad61dca4704dae1016a69a8006e
+      internalID: 1009251837
       vertices: []
       indices: 
       edges: []
@@ -160,20 +170,20 @@ TextureImporter:
       name: Puff_Attack_Right_2
       rect:
         serializedVersion: 2
-        x: 65
+        x: 64
         y: 0
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 35ffc7495252a8220800000000000000
-      internalID: 2488842587410857811
+      spriteID: fa864679b9bdd0449a88e2c9156c3fc2
+      internalID: 869894572
       vertices: []
       indices: 
       edges: []
@@ -182,20 +192,20 @@ TextureImporter:
       name: Puff_Attack_Right_3
       rect:
         serializedVersion: 2
-        x: 98
+        x: 96
         y: 0
-        width: 27
+        width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e22608245c351f270800000000000000
-      internalID: 8282493296400425518
+      spriteID: 8666792a95c2a8844a251412a3d9e0c1
+      internalID: -502316001
       vertices: []
       indices: 
       edges: []
@@ -204,7 +214,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 7aa62a436a5e8a341b133bf9e89d24c6
     internalID: 0
     vertices: []
     indices: 
@@ -212,12 +222,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Puff_Attack_Right_0: -2009491328394620056
-      Puff_Attack_Right_1: 1714645720908687561
-      Puff_Attack_Right_2: 2488842587410857811
-      Puff_Attack_Right_3: 8282493296400425518
+      Puff_Attack_Right_0: 1768888602
+      Puff_Attack_Right_1: 1009251837
+      Puff_Attack_Right_2: 869894572
+      Puff_Attack_Right_3: -502316001
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
