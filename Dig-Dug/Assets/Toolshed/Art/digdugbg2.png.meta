@@ -1,23 +1,10 @@
 fileFormatVersion: 2
-<<<<<<< Updated upstream
-guid: fa81df99e22a7b64ca0e983a4640d3f1
-=======
-guid: a33469e4f5dd6cb4187a736fdc02dc84
->>>>>>> Stashed changes
+guid: 4e3ee81becda9bc41ae47c40018bb357
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2009491328394620056
-    second: Puff_Attack_Right_0
-  - first:
-      213: 1714645720908687561
-    second: Puff_Attack_Right_1
-  - first:
-      213: 2488842587410857811
-    second: Puff_Attack_Right_2
-  - first:
-      213: 8282493296400425518
-    second: Puff_Attack_Right_3
+      213: 6738349560273154580
+    second: digdugbg2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -50,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -59,12 +46,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -88,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -113,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Puff_Attack_Right_0
+      name: digdugbg2_0
       rect:
         serializedVersion: 2
-        x: 2
+        x: 0
         y: 0
-        width: 27
-        height: 32
+        width: 608
+        height: 384
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,74 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8639fc7984adc14e0800000000000000
-      internalID: -2009491328394620056
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Puff_Attack_Right_1
-      rect:
-        serializedVersion: 2
-        x: 34
-        y: 0
-        width: 24
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9c8e766d235abc710800000000000000
-      internalID: 1714645720908687561
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Puff_Attack_Right_2
-      rect:
-        serializedVersion: 2
-        x: 65
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 35ffc7495252a8220800000000000000
-      internalID: 2488842587410857811
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Puff_Attack_Right_3
-      rect:
-        serializedVersion: 2
-        x: 98
-        y: 0
-        width: 27
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e22608245c351f270800000000000000
-      internalID: 8282493296400425518
+      spriteID: 412bd78493d638d50800000000000000
+      internalID: 6738349560273154580
       vertices: []
       indices: 
       edges: []
@@ -204,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -214,10 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Puff_Attack_Right_0: -2009491328394620056
-      Puff_Attack_Right_1: 1714645720908687561
-      Puff_Attack_Right_2: 2488842587410857811
-      Puff_Attack_Right_3: 8282493296400425518
+      digdugbg2_0: 6738349560273154580
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
