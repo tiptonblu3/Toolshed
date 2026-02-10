@@ -43,9 +43,9 @@ GameObject:
   - component: {fileID: 4826304934308954531}
   - component: {fileID: 8647168815479035298}
   - component: {fileID: 489733277888583409}
-  - component: {fileID: 3464090606453306408}
   - component: {fileID: 5365496788890848839}
   - component: {fileID: 5081015737176183784}
+  - component: {fileID: 2340594696556290612}
   - component: {fileID: 8833107244441935262}
   - component: {fileID: 8223002008919929978}
   - component: {fileID: 6249896978826393492}
@@ -165,25 +165,6 @@ MonoBehaviour:
   DigTimer: 0
   IsDigging: 0
   MoveInput: {x: 0, y: 0}
---- !u!114 &3464090606453306408
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3118247970886546387}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24aa2e6f52e27924bbc5491891df39f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerStats
-  PlayerAnimator: {fileID: 8223002008919929978}
-  Health: 1
-  Lives: 3
-  IsDead: 0
-  GameOver: 0
-  IsInvincible: 0
-  Score: 0
 --- !u!114 &5365496788890848839
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -227,8 +208,30 @@ MonoBehaviour:
   FootballPrefab: {fileID: 4982224238187528047, guid: 1e4cdafb3516cd140a411407721428ba, type: 3}
   FirePoint: {fileID: 4650578919405325269}
   CanAttack: 1
+  fireRate: 0.5
   FireAction: {fileID: -1383790030839574557, guid: 44c0669e9cb542b46b9830a71d8f0750, type: 3}
   MoveSpeedScript: {fileID: 0}
+--- !u!114 &2340594696556290612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3118247970886546387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0c1990c5c881054fafea4eec83bf435, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerStats
+  PlayerAnimator: {fileID: 0}
+  Health: 1
+  Lives: 3
+  IsDead: 0
+  GameOver: 0
+  IsInvincible: 0
+  Score: 0
+  HighScore: 0
+  SaveScoreKey: 0
 --- !u!114 &8833107244441935262
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -17,6 +17,36 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Toolshed/Scenes/Level7.unity
     guid: c54f30e7660191f46aae994abbd12ba7
+  - enabled: 1
+    path: Assets/Toolshed/Scenes/Level1.unity
+    guid: 9dbf495135a736e4795bd1acab045011
+  - enabled: 1
+    path: Assets/Toolshed/Scenes/Level2.unity
+    guid: 9b12bf25ec76c5743acfefafca607517
+  - enabled: 1
+    path: Assets/Toolshed/Scenes/GameOver.unity
+    guid: 3f926e9152d563f4f857c0807e6fbd53
+  - enabled: 1
+    path: Assets/Toolshed/Scenes/Level3.unity
+    guid: 35beb1fa6ed4f1947b2c2044f0f2d6f8
+  - enabled: 1
+    path: Assets/Toolshed/Scenes/Level4.unity
+    guid: f3a03706a5301764e99c6e9dd08e6876
+  - enabled: 1
+    path: Assets/Toolshed/Scenes/Level5.unity
+    guid: abd94d0caf0828d44b580473f82b0620
+  - enabled: 1
+    path: Assets/Toolshed/Scenes/Level6.unity
+    guid: a846d530a202cf44b82806613ee9c208
+  - enabled: 1
+    path: Assets/Toolshed/Scenes/Level8.unity
+    guid: de4d29acf5aedb84ca45fed0043fa7ad
+  - enabled: 1
+    path: Assets/Toolshed/Scenes/Level9.unity
+    guid: 7a363701f9f940543a37b33a8138f771
+  - enabled: 1
+    path: Assets/Toolshed/Scenes/Level10.unity
+    guid: 4ea2e7bc1fc6c7d468646a48e22d14da
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
