@@ -1,5 +1,6 @@
 using UnityEditor.AdaptivePerformance.Editor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerStats : MonoBehaviour
 {
@@ -12,8 +13,13 @@ public class PlayerStats : MonoBehaviour
     public int HighScore;
     public static PlayerStats Instance { get; private set; }
 
-    
+    public int SaveScoreKey; // Key for saving score in PlayerPrefs
 
+
+    void LoadSceneByName(string Level1)
+    {
+        SceneManager.LoadScene(Level1);
+    }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -51,8 +57,15 @@ public class PlayerStats : MonoBehaviour
         }
     }
 
+ public void ReloadCurrentScene()
+    {
+        // Gets the name of the active scene and loads it
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
     void OnCollisionEnter(Collision collision)
     {
+        Debug.LogWarning("Collision Detected");
         // Example collision handling
         if (collision.gameObject.CompareTag("Enemy"))
         {
@@ -67,11 +80,14 @@ public class PlayerStats : MonoBehaviour
                     // Handle player death (e.g., trigger game over)
                     HighScore=Score;
                     Score=0;
+                    SaveScoreKey = Score;
+                    // Save the score with a key name "PlayerScore"
+                    LoadSceneByName("GameOver");
                 }
                 else
                 {
                     IsDead = true;
-
+                    ReloadCurrentScene();
 
                 }
             }
