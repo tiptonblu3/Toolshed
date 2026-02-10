@@ -8,6 +8,7 @@ TagManager:
   - Ground
   - Enemy
   - Obstacle
+  - BlockBreak
   layers:
   - Default
   - TransparentFX
