@@ -155,12 +155,12 @@ public class Football : MonoBehaviour
         // Hit an enemy — damage would be applied in the enemy script
         if (collision.CompareTag("Enemy"))
         {
-            //Debug.LogWarning("Score = " + Stats.Score);
-            SaveScoreKey = SaveScoreKey + 100;
-            Debug.LogWarning("Football hit an enemy, score increased by 100! New Score = " + SaveScoreKey);
+            int currentTotal = PlayerPrefs.GetInt("PScore", 0);
+            int newTotal = currentTotal + 100;
+            Debug.LogWarning("Football hit an enemy, score increased by 100! New Score = " + newTotal);
             
             // Save the score with a key name "PlayerScore"
-            PlayerPrefs.SetInt("PScore", SaveScoreKey);
+            PlayerPrefs.SetInt("PScore", newTotal);
             // Highly recommended: Force a save to disk immediately
             PlayerPrefs.Save();
 

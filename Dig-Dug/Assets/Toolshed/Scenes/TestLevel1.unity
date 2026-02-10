@@ -1595,7 +1595,7 @@ GameObject:
   - component: {fileID: 251899724}
   - component: {fileID: 251899723}
   - component: {fileID: 251899722}
-  - component: {fileID: 251899721}
+  - component: {fileID: 251899725}
   m_Layer: 0
   m_Name: Enemy Var
   m_TagString: Enemy
@@ -1603,22 +1603,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &251899721
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 251899720}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 990b2c5bd41323a4796dbb11de1293e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyBehaviorWIP
-  MoveSpeed: 2.5
-  TileSize: 1
-  playerTarget: {fileID: 0}
-  rb: {fileID: 251899723}
 --- !u!61 &251899722
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1708,6 +1692,32 @@ Transform:
   - {fileID: 2096910738}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &251899725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 251899720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9909ce7c9d22924ba1d91bf5d77e570, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Enemy
+  MoveSpeed: 2.5
+  GhostSpeedMultiplier: 0.4
+  TileSize: 1
+  MinGrace: 3
+  MaxGrace: 8
+  GhostCooldown: 10
+  LookAheadRange: 3
+  MoveVerticalInGrace: 0
+  IsFacingLeft: 0
+  IsFacingUp: 0
+  IsFacingDown: 0
+  IsGhosting: 0
+  IsGrace: 1
+  IsChasing: 0
 --- !u!1001 &259206040
 PrefabInstance:
   m_ObjectHideFlags: 0
