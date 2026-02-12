@@ -1,4 +1,4 @@
-Project: KnightDug - A UCF DigDug Recreation
+# Project: KnightDug - A UCF DigDug Recreation
 
 Made for UCF's Game Production (DIG 4715C) course with Professor Ivana Pagan
 
